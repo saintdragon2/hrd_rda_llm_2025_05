@@ -1,0 +1,1148 @@
+DOI : https://doi.org/10.5389/KSAE.2024.66.5.015 
+ISSN 1738 3692 | eISSN 2093 7709
+한국농공학회논문집 제66권 제5호, 2024 • 15
+APEX 모델을 이용한 옥수수-가을배추 재배지의 시비 수준별 
+비점오염 부하량 평가
+Evaluation of Non-Point Pollution Loads in Corn-Autumn Kimchi Cabbage Cultivation Areas by 
+Fertilizer Application Levels Using the APEX Model
+이종문a⋅엽소진b⋅전상민c⋅이병모d⋅양예린e,f⋅최순군g,†
+Lee, Jong-MunㆍYeob, So-JinㆍJun, Sang-MinㆍLee, ByungmoㆍYang, YerinㆍChoi, Soon-Kun
+ABSTRACT
+Agriculture is recognized as an important anthropogenic cause of non-point source loads. Improved understanding of non-point source loads according 
+to fertilization practices can promote climate change and eutrophication mitigation. Thus, this study evaluated the impact of conventional and standard 
+fertilization practices on non-point pollution (NPP) loads in a dual-cropping system, utilizing the Agricultural Policy/Environmental eXtender (APEX) 
+model. Our research objectives were twofold: firstly, to calibrate and validate the APEX model with observed data through experiments from 2018 to 
+2023; and secondly, to compare the NPP loads under conventional and standard fertilization practices. The model calibration and validation showed 
+satisfactory performance in simulating nitrogen (N) and phosphorus (P) loads, illustrating the model’s applicability in a Korean agricultural setting. The 
+simulation results under conventional fertilization practices revealed significantly higher NPP loads compared to the standard fertilization, with P loads 
+under conventional practices being notably higher. Our findings emphasize the crucial role of recommended fertilization practices in reducing non-point 
+source pollution. By providing a quantitative assessment of NPP loads under different fertilization practices, this study contributes valuable information 
+to sustainable nutrient management in agricultural systems facing the dual challenges of climate change and environmental conservation.
+Keywords: APEX model; fertilization practices; non-point pollution; sustainable agriculture; water quality
+Ⅰ. 서 론
+기후변화에 따른 기온 상승 및 이상기상으로 집중 호우와 
+강우 패턴 변화가 발생하고, 이는 농업환경 전반에 영향을 미
+치고 있다 (Murdoch et al., 2000; Koo et al., 2017). 농경지에 
+과도하게 투입한 양분과 집중 호우는 농업지역에서 발생하는 
+비점오염에 의한 수질오염 기여도를 증가시킬 것으로 예상되
+며, 기후변화에 따른 비점오염원 관리의 필요성이 더욱 중요
+시 되고 있다 (Kim et al., 2013; Lee and Yoon, 2019). 국내 
+농업 분야의 질소 (nitrogen, N) 수지는 230 kgN/ha이며, 인 
+(phosphorus, P) 수지는 46 kgP/ha로 OECD 국가 중 가장 높은 
+것으로 보고되고 있다 (OECD, 2024). 양분수지는 농경지에 
+추가된 양분 (비료, 가축분뇨, 유기물, 대기 침적 등)과 제거되
+거나 손실된 양 (수확된 작물, 질소의 휘발, 용탈, 침식 등)을 
+비교한 것으로 농업에서 작물 생산량을 향상시키기 위해 비
+료 사용은 불가피한 것이 사실이다. 다만, 과도한 비료 사용은 
+강우 및 관개로 인해 주변 수역으로 유출되어 수질 오염으로 
+이어질 수 있어 적절한 관리가 필요하다 (Nam et al., 2011; 
+Alori et al., 2017; Cui et al., 2020). 기후변화는 이상기상을 
+야기하고, 결과적으로 국내 농경지에서 배출되는 비점오염 
+배출 비중을 더욱 높일 것으로 예상된다 (Murdoch et al., 
+2000).
+정부에서는 농경지의 적절한 시비를 위해 작물별 비료 사
+용처방 기준을 제시하고 있다 (NAS, 2019). 그러나 대부분의 
+농가에서 경험에 의존하고 있으며, 실제 사용한 비료 투입량
+은 질소 기준으로 추천량보다 28∼140 kgN/ha 이상 더 많은 
+것으로 조사되었다 (NAS, 2020). 이는 농경지 양분 집적과 
+a Post Doctoral Researcher, Climate Change Assessment Division, 
+National Institute of Agricultural Sciences
+b Researcher, Climate Change Assessment Division, National Institute 
+of Agricultural Sciences
+c Researcher, Climate Change Assessment Division, National Institute 
+of Agricultural Sciences
+d Senior Researcher, Climate Change Assessment Division, National 
+Institute of Agricultural Sciences
+e Collaborative Researcher, Climate Change Assessment Division, 
+National Institute of Agricultural Sciences
+f Master Course, Department of Agronomy, Jeonbuk National University
+g Researcher, Climate Change Assessment Division, National Institute 
+of Agricultural Sciences
+† Corresponding author
+  Tel.: +82-63-238-2504, Fax: +82-63-238-3823
+E-mail: soonkun@korea.kr
+Received: April 15, 2024
+Revised: June 26, 2024
+Accepted: July 16, 2024
+
+------------------------------------
+16 • Journal of the Korean Society of Agricultural Engineers, 66(5), 2024. 9
+비점오염 발생이라는 악순환의 원인이 될 수 있기 때문에 적
+절한 비료 사용을 위한 대책 마련이 필요하다. 이를 위해 정부
+는 농경지의 양분 과잉 투입으로 인한 환경 문제를 해결하기 
+위해 지역단위의 농경지 양분 부하 현황을 산출하고, 양분 수
+준을 관리하는 양분관리 제도의 단계적인 도입을 계획하고 
+있다 (ME, 2015). 또한, 양분관리 제도의 실행을 위해 농식품
+부에서는 2020년 공익형 직불제 개편을 통해 비료 사용량 준
+수, 부숙 퇴비 사용 등의 의무준수 사항에 관한 기본형 공익직
+불제를 도입하여 인센티브를 지급하는 정책으로 농업환경 개
+선에 노력하고 있다 (Kim et al., 2021). 
+인센티브 정책을 효과적으로 수행하기 위해서는 농업인에
+게 최적관리프로그램 (Best Management Program, BMP)을 수
+행하도록 유도하고, 그 효과에 관한 정량적인 데이터 구축 및 
+평가가 필요하다. 농업에서의 BMP는 관개, 배수, 제방, 완충
+대, 단구, 수로, 비료, 가축분뇨 관리, 저류지, 저수지, 윤작 및 
+작물 선택, 농약 살포, 방목 및 경운 등을 포함한다 (Williams 
+and Izaurralde, 2010; Mudgal et al., 2012; Koo et al., 2017). 
+Hong et al. (2016)은 국내 고추 재배 시 화학비료를 사용했을 
+때, 총 질소가 10.1∼11.5 kgN/ha, 총 인이 3.9∼6.0 kgP/ha 유
+출된다고 보고하였으며, 우분 퇴비 투입 시 질소 9.9∼12.0 
+kgN/ha, 인 4.5∼6.6 kgP/ha, 돈분 퇴비 투입 시 질소 9.2∼9.5 
+kgN/ha, 인 3.8∼4.0 kgP/ha가 유출된다고 보고하였다. 여러 
+가지 BMP 전략 중 윤작은 농경지의 유출량을 58%, 인 유출을 
+85% 감소시키는 것으로 보고된 바 있다 (Jiao et al., 2011). 
+Hunt et al. (2019)은 2모작 이상으로 다양한 작물을 포함하여 
+재배할 때, 수확량과 수익성을 유지 혹은 향상시키면서 양분 
+유출과 토양 침식 또한 상당히 낮추는 것으로 보고하였다. 다
+양한 작물을 재배할 때 2모작과 비교하여 총 질소 부하량 
+39%, 총 인 부하량을 30%까지 감소시킬 수 있다고 보고하였
+다. 양분관리 제도의 신속한 도입을 위해서는 윤작의 비점오
+염원 유출 패턴을 모니터링하고, 시비 수준에 따른 정량적인 
+비점오염원 유출량 평가가 필요하다.
+최근에는 관측을 통한 농업부문 비점오염 평가의 한계를 
+극복하기 위해 다양한 유역 수문학적인 분석 모형들이 개발
+되고 있으며, 다양한 환경조건 및 관리 조건을 고려한 비점
+오염 부하량 모의에 활용되고 있다 (Tuppad et al., 2010). 
+그러나 기존의 과정 기반 모델의 대부분은 중⋅대규모 유역 
+모델로 BMP의 결과를 효과적으로 분석하지 못하였으며 
+(Liu et al., 2017; Xingpo et al., 2021; Salaudeen et al., 2023), 
+복잡하고 불규칙적인 농경지 관리에 대한 분석이 어려웠다 
+(Tuppad et al., 2010; Ding et al., 2023). 반면, Agricultural 
+Policy/ Environmental eXtender (APEX) 모델은 USDA와 텍
+사스 A&M 농업생명연구소에서 개발한 모델로 전 농장/소
+규모 유역 관리에 활용하기 위해 개발되었다 (Williams et 
+al., 2012; Mudgal et al., 2012). 이 모델은 바람과 물에 의한 
+침식, 지속가능성과 경제성, 관개와 수질, 토질, 작물 경합, 
+날씨와 해충 등의 요소를 고려하여 다양한 BMP를 평가하기 
+위해 구성되었다 (Williams et al., 2006; Williams et al., 
+2012). 
+Ramirez-Avila et al. (2017)은 APEX 모델을 활용하여 밭에
+서의 가축분뇨 투입에 따른 유출량과 인 부하량을 평가하였
+으며, Wang et al. (2008)은 옥수수 재배지에서 경운 방식에 
+따른 유출량과 퇴적량에 대해 평가한 바 있다. Baffaut et al. 
+(2019)은 옥수수-콩-밀 재배지에서 무경운과 피복작물에 따른 
+유출량과 비점오염 부하량을 평가한 결과 APEX 모델은 유출
+과 관련한 예측 능력이 매우 우수했으며, 유출되는 비점오염
+원에 대해서도 대부분 만족할 만한 수준이라고 평가하였다. 
+그밖에도 APEX 모델은 집중적인 방목 회전, 식생수로, 분뇨 
+관리 등 다양한 농경지 관리에 활용되어 경관과 유역에 걸쳐 
+다양한 농업 시나리오를 모델링할 수 있는 유연성과 능력을 
+보여주었다 (Gassman et al., 2009).
+그러나, APEX 모델은 미국의 지형과 재배환경을 바탕으
+로 개발되었기 때문에 자연환경 및 재배방식이 다른 국내 
+농경지에 바로 적용하는 것은 한계가 있다 (Koo et al., 2017). 
+국내의 경우, Choi et al. (2017)은 한국의 논벼 재배지에 대
+한 평가를 위해 논의 벼 재배 특성을 반영한 APEX 모델을 
+기반으로 APEX-paddy 모델을 개발하였다. 이후 Kamruzzaman 
+et al. (2020)은 익산의 논을 대상으로 APEX-paddy 모델의 
+적용성을 검토하였고, Choi et al. (2021)은 SSPs 시나리오에 
+따른 논 필요수량 변동 평가를 수행한 바 있다. 또한, Bazrkar 
+et al. (2023)은 작물 생산량 및 질소 부하량 변동을 평가하였
+다. 국내 밭의 경우, Koo et al. (2017)이 강원도 고랭지 밭에
+서의 유출량과 인 부하량 평가를 통해 APEX 모델의 국내 
+적용성을 검토한 바 있다. 국내 논에서 APEX-paddy 모델을 
+활용하여 비점오염 부하량을 평가한 연구는 모델 개발 및 
+적용성 평가 등 활발하게 진행되고 있지만, APEX 모델을 
+활용하여 밭에서 비점오염원 부하량을 평가한 연구는 매우 
+부족하다. 
+따라서 본 연구에서는 APEX 모델을 활용하여 표준시비
+와 관행시비에 따른 옥수수 - 배추 2모작에서의 비점오염 
+부하량을 평가하고자 하였다. 이를 위해 옥수수 - 배추 재배 
+시 질소, 인의 부하량 평가를 위해 APEX 모델 입력 자료를 
+구축하였고, 시험포장 관측 자료를 활용하여 APEX 모델을 
+보⋅검정 하였다. 최종적으로 평년 기후에 대한 국내 표준시
+비와 관행시비의 비점오염 부하량을 모의하고 비교⋅평가
+하였다.
+
+------------------------------------
+한국농공학회논문집 제66권 제5호, 2024 • 17
+Ⅱ. 재료 및 방법
+1. 연구대상 지역
+APEX 모델의 보⋅검정을 위해 전라북도 완주군 국립농업
+과학원 내 경사라이시미터 시험포장 (35°49′28″N, 127°02′50″
+E)을 조성하여 2018년∼2023년 6년간 강우 유출수를 수집 및 
+분석하였다. 시험구는 너비 2 m, 길이 24 m로 조성하였으며 
+2반복으로 구성하였다. 시험구의 경사도는 13%이며, 상층부 
+토양 (0∼20 cm) 특성은 모래 61.5%, 미사 28.1%, 점토 10.4%
+로 사양토 (sandy loam)였다. 연구 기간 중 연평균 강수량은 
+1394.7 mm이고, 연평균 기온은 14.2°C였다 (KMA, 2023). 연
+구 대상지는 몬순기후로 대부분의 강수량은 7월과 8월 동안 
+집중되어 발생하였다.
+2. 시험포장 운영 및 자료수집
+시험포장에서 2018년∼2019년은 옥수수 (대학찰) - 가을배
+추 (천고마비) 2모작을, 2020년∼2023년은 옥수수 단작 재배
+를 하였다. 표준시비 및 영농일정 관리를 위하여 국립농업과
+학원의 작물별 비료 사용처방 (NAS, 2019)과 농업정보포털 
+농사로의 품목별 관리매뉴얼 (RDA, 2022)을 참고하여 수행
+하였다. 
+부하량 및 수질 샘플 수집을 위해 유출수 분취기 (공개특허 
+10-2013-0050011)를 설치하였다. 유출수 분취기는 유출수의 
+흐름 동력을 이용하여 샘플링 디스크를 회전시켜 유출수 일
+부 (1/100)를 채수하는 도구로 유출수 수량, 수질에 관한 준 
+전수조사가 가능하게 한다. 수질 시료는 강우이벤트 종료 후 
+채수통의 물을 진탕한 후 상등액을 취하여 무균 채수병에 담
+아 분석실로 운반하여 수질오염공정시험기준에 따라 분석하
+였다. 시험포장 기상자료는 국립농업과학원 내 농업기상관측
+소 자료를 수집하여 사용하였고, 토양자료의 경우 농촌진흥
+청 토양환경정보시스템 “흙토람”에서 제공하는 자료를 활용
+하여 구축하였다 (NAS, 2023).
+3. 밭 비점오염 부하량 평가 모델
+본 연구에서는 밭의 비점오염 부하량을 평가하기 위해 
+APEX (version 1501) 모델을 사용하였다. APEX 모델은 농장 
+및 소유역 규모의 농업지역에 대하여 농업활동이 토양 및 물 
+환경에 미치는 영향을 평가하기 위해 개발되었다 (Williams 
+et al., 2012; Mudgal et al., 2012; Bhandari et al., 2017). APEX 
+모형은 지형 및 토양특성, 기후, 관개방법, 작물 생육 및 작물 
+간 경합 등의 요소를 고려하여 경운, 시비, 관개, 작물 선택 
+및 윤작, 농약 살포 등 농장의 관리전략을 수립하고, 환경영향
+을 평가할 수 있다 (Williams et al., 2012; Kim et al., 2021). 
+이외에도 APEX 모형은 대기 중 이산화탄소 (carbon dioxide, 
+CO2) 농도와 기후변화를 고려하여 작물의 생장 및 생산량 변
+화를 모의할 수 있다 (Koo et al., 2017; Baffaut et al., 2019). 
+APEX 모형은 일 단위로 모의되는 과정 기반 모형 (process 
+based model)이며, 일부 과정은 시간 단위 또는 그보다 더 짧
+은 시간 단위에 대한 모의 구동이 가능하다 (Williams et al., 
+2012; Baffaut et al., 2019).
+Fig. 1 The location of study area
+
+------------------------------------
+18 • Journal of the Korean Society of Agricultural Engineers, 66(5), 2024. 9
+4. 모델의 보⋅검정
+밭 토양의 질소 및 인 부하량 평가를 위해 관련 있는 주요 
+요인에 대해 보정하였다. 매개 변수 보정은 하위 영역 파일 
+(.SUB), 매개 변수 파일 (.PARM) 및 제어 파일 (CONT)을 포
+함한 여러 파일에서 수행된다 (Kamruzzaman et al., 2020). 본 
+연구에서는 문헌 고찰을 통해 질소 및 인의 부하량 영향을 
+미치는 유출수, 토양유실 및 침식, 질소 및 인과 관련한 매개
+변수를 확인하였다 (Wang et al., 2012). 모델의 보정은 R2 
+(coefficient of determination)를 목적함수로 사용하였고, 질소 
+및 인 부하량과 관련한 민감 변수를 APEX 모형이 추천하는 
+범위 내에서 수동으로 보정하였다 (Table 1). 보정을 위한 자
+료는 2018년∼2021년의 4년간 관측자료를 사용하였고, 2022
+년∼2023년의 2년간 관측 자료는 검정자료로 활용하였다. 
+질소 및 인 부하량의 검정은 Nash-Sutcliff model efficiency 
+(NSE) (Nash and Sutcliffe, 1970), percentage bias (PBIAS) 
+(Gupta et al., 1999), R2를 이용하였다. R2는 실측값과 모의 값의 
+선형 관계를 평가하는 지표로서 0∼1 범위의 값을 가지며, 실
+측값과 모의 값이 선형 관계일수록 1에 가까운 값을 나타낸다. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(1)
+여기서, 와 는 각각 관측시간 에 대한 관측 값과 모의 
+값이며 는 관측 값의 산술평균값이다. 그리고 은 전체 관
+측이다 (Moriasi et al., 2007).
+NSE는 모의결과가 실측값과 얼마나 유사한가를 평가하는 
+지표로서 -∞∼1 범위의 값을 가지며 1에 가까울수록 모의 
+값이 실측값을 잘 반영하는 것으로 평가할 수 있다. 만약 0 
+이하의 값을 나타낸다면 모의결과를 이용하는 것 보다 실측
+값의 평균을 이용하는 것이 더 좋음을 의미한다 (Moriasi et 
+al., 2007; Song et al., 2015).
+
+
+
+
+
+
+
+
+
+
+
+(2)
+PBIAS는 모의 값과 실측값 총합의 대소를 비교하는 지표
+이다. PBIAS의 최적값은 0.0으로서 PBIAS의 절댓값이 낮을
+수록 모의 값이 실측값을 잘 반영하는 것으로 판단할 수 있다 
+(Moriasi et al., 2007). 양의 값은 모형이 과소 추정을, 음의 
+값은 모형이 과대 추정하는 것을 의미한다. PBIAS는 다음과 
+같이 산정된다.
+
+
+
+
+
+
+
+
+
+× 
+(3)
+5. 시비 수준에 따른 비점오염 부하량 모의
+본 연구에서는 시비 수준에 따른 비점오염 부하량의 장기
+적인 영향을 평가하기 위해 1991년부터 2020년까지 30년을 
+설정하고 일 단위로 비점오염 부하량을 모의하였다. 일별 부
+하량을 평균화하여 월 단위 및 연간 비점오염 부하량을 계산
+하였다. 농경지의 시비 수준에 따른 비점오염 부하량을 평가
+하기 위해 작물별 비료 사용처방 (NAS, 2019)에 제시된 표준 
+시비량 (standard fertilizer, SF)과 농업환경자원변동평가 
+(NAS, 2020)에 제시된 실제 농가에서 투입한 시비량 
+(convention fertilizer, CF)을 구분하여 평가하였다. 퇴비는 우
+분 퇴비로 동일하게 20 ton/ha로 투입하였고, 영농 일정 및 
+옥수수 - 배추 파종량 또한 동일한 조건에서 시비량만 표준 
+및 관행으로 달리하여 모의하였다 (Table 2).
+
+	
+	 
+
+ 
+ 	 	
+ 
+
+		
+	 		
+
+
+   !
+"! #  $  !
+% #  $"!
+ $ %
+&
+   
+%! #  $  
+' #  $%!
+ $ (
+
+  "
+% #  $ "
+' #  $%
+ $ '
+)
+
+)   
+" # ) $  
+! # ) $ "
+ ) $ !
+*&
+)  %!
+! # ) $ %!
+'! # ) $ !
+ ) $ '!
+&+,-
+
+&+,- $ .!
+.! # &+,- $ ./
+./ # &+,- $ ./!
+&+,- 0 ./!
+*&
+&+,- $ ./
+./ # &+,- $ .1
+.1 # &+,- $ .'
+&+,- 0 .'
+,  	  2  2  34  	  
+  4	 
+Table 1 Criteria for evaluating the fitness of hydrological model (Moriasi et al., 2015a)
+
+------------------------------------
+한국농공학회논문집 제66권 제5호, 2024 • 19
+Ⅲ. 결과 및 고찰
+1. APEX 모델 보⋅검정
+모델의 보정 단계에서는 다양한 환경 요인과 농업 활동이 
+유출수의 질과 양에 미치는 영향을 정확히 반영하기 위해, 총 
+14개의 주요 매개변수를 선정하여 조정하였다. 매개변수들은 
+유출수와 관련된 변수 5개, 총 질소 (T-N) 관련 변수 3개, 총 
+인 (T-P) 관련 변수 2개, 지표수 관련 변수 2개, 그리고 질소와 
+인의 복합적 영향을 반영하는 변수 2개로 구성되었다. 각 매
+개변수의 보정은 관련 연구와 비교 분석을 통해 이루어졌으
+며, 이 과정을 통해 APEX 모델이 한국의 농업 환경에 잘 맞도
+록 조정하였다 (Koo et al., 2017; Kamruzzaman et al., 2020; 
+Choi et al., 2021). 각각의 매개변수에 대해서는 APEX 모형의 
+추천 범위 내에서 수동으로 보정하였다 (Table 3).
+밭에서 옥수수 - 가을배추 2모작 재배에 따른 질소 부하량 
+보정 결과 R2는 0.65, NSE 0.3, PBIAS 21.1%로 나타났다. 검
+정 기간 R2는 0.64, NSE는 0.42, PBIAS는 -20.8%로 나타났다 
+(Fig. 2, Fig 3). 밭에서의 질소 부하량 모의 결과 R2는 보정기
+간과 검정 기간 모두 만족 수준인 것으로 평가되었다. NSE는 
+보정기간은 불만족으로 나타났지만, 검정 기간은 만족 수준
+인 것으로 평가되었다. PBIAS는 보정기간과 검정 기간 모두 
+만족 수준으로 평가되었다 (Table 4).
+인 부하량 보정의 경우 R2는 0.76, NSE 0.72, PBIAS -22.1%
+로 나타났으며, 검정 기간의 R2는 0.69, NSE 0.33, PBIAS 
+5.1%로 나타났다 (Fig. 2, Fig 3). 인 부하량 모의 결과 NSE는 
+보정기간에 매우만족 수준으로 평가되었으나, 검정 기간에 
+불만족 수준으로 평가되었다. PBIAS는 보정기간에 매우만족 
+수준으로 평가되었고, 검정 기간은 만족 수준으로 평가되었
+다 (Table 4).
+5	
+6
+
+	
+-	
+	 	7	
+6		 	7	
+-
+ /
+6
+6		 
+	
+1 	*
+1 	*
+-
+ 1!
+8	7	  &
+9:&:;<
+"=:':%' >*
+// :/ :// >*
+-
+ '
+6 4
+! 
+	*?
+! 
+	*?
+ / 
+8	7	
+"=:: >*
+// :: >*
+- /
+;
+33
+8	7	  &
+//:" :// >*
+//:/':/ >*
+- 1
+; 33 4
+' 
+	*?
+' 
+	*?
+
+ /(
+8	7	
+/!::(( >*
+//::'1 >*
+	 (
+8	7	
+/!::(( >*
+/::'1 >*
+Table 2 Cultivation management schedule by fertilizer input level
+,
+	
+&	
+5
+	
+
+5	
+
+63	
+
+5
+&-=1
+  @		  	 > 94 6A<
+/:1
+(
+1!
+&-1
+  3 	 3		
+!:(
+1
+(
+-&
+&>  	 B   @		 	
+:/
+/
+=
+&-/1
+ 
+	 	
+/!:1!
+/!
+1
+&-/"
+)
+	 
+	  	
+:!
+/
+'
+C:
+8D
+- 		  	   9
+
+<
+!:/!
+ 
+/("
+&-"1
+	7	*		 
+		 	
+!:!
+/!
+!
+&-"
+ E	
+:/
+!
+%
+C:&
+&-!=
+& 
+4 	 3 
+	 	
+/:1
+/
+1
+&- 
+3 
+
+  	
+/:1
+/!
+/
+
+
+5
+)F	  4	 
+:"
+(
+%
+&-(=
+E  	
+	 3 
+	 
+ 9<
+:/!
+"
+!
+C: 
+C:&
+&-1=
++ E 
+/:!
+/
+1
+&-%1
+  F	 	
+/:!
+1!
+!
+Table 3 APEX model parameters optimization results
+
+------------------------------------
+20 • Journal of the Korean Society of Agricultural Engineers, 66(5), 2024. 9
+5
+63	
+	
+
+)
+&+,-
+
+)
+&+,-
+C:
+%!
+'
+ 1//
+%(
+(1
+:1 
+C:&
+"%
+"1
+:11/
+%=
+''
+ :!/
+ G   	 	 		 	 
+ 	 4 	 		
+Table 4 Final performance indicator values on calibration and validation of APEX simulated total nitrogen and total phosphorus
+Fig. 2 APEX model calibration (2018-2021) and validation (2022-2023) result for total nitrogen loads (a, b), total phosphorus loads (c, d) 
+Fig. 3 Comparison of observed and simulated data results during the study period
+
+------------------------------------
+한국농공학회논문집 제66권 제5호, 2024 • 21
+2. 시비 수준에 따른 비점오염 부하량 평가
+APEX 모델을 활용하여 관행시비와 표준시비에 따른 밭 
+토양의 질소와 인 부하량 모의하였다. 관행시비의 경우 연간 
+질소가 568 kg/ha 투입되었고, 표준시비의 경우 490 kg/ha가 
+투입되었으며, 인의 경우 관행시비는 318 kg/ha, 표준시비는 
+53.1 kg/ha가 투입되었다. 농가에서는 표준 시비량에 비해 질
+소를 15.9% 추가하여 시비하였고, 인의 경우 498.9%로 약 
+500%가량 추가 시비하는 것으로 나타났다 (Table 5).
+관행시비를 할 때, 질소는 연평균 39.1 kg/ha/yr 유출되었고, 
+인은 59.6 kg/ha/yr 유출되었다. 표준시비의 경우, 질소는 37.3 
+kg/ha/yr, 인은 18.0 kg/ha/yr 유출되는 것으로 분석되었다 
+(Table 5). 농가에서 관행시비로 옥수수 - 가을배추 2모작 재배 
+시 표준시비 할 때보다 질소 부하량은 4.8%, 인 부하량은 
+231.1% 증가하는 것으로 나타났다 (Fig. 4). 
+30년 동안의 월별 평균값으로 분석한 결과 질소와 인의 부
+하량은 12월∼2월에 가장 낮았고, 7월∼9월에 가장 높은 것으
+로 나타났으며, 8월이 절정인 것으로 분석되었다. 관행시비의 
+경우 질소 부하량은 0.4∼1.3 kg/ha/day, 인 부하량은 0.5∼2.3 
+kg/ha/day이었다. 
+표준시비는 질소 부하량이 0.4∼1.3 
+kg/ha/day, 인 부하량이 0.3∼0.5 kg/ha/day로 나타났다. 관행
+시비는 표준시비보다 질소는 0.8%∼5.4% 증가하는 것으로 
+나타났으며, 인의 경우 최소 27.0%에서 최대 375.5%까지 증
+가하였다 (Fig. 5).
+H5
+68 9>*<
+8 9>*<
+8	7 
+	
+
+!% 
+(=
+&
+'/ 
+ !'/
+:
+	 
+	 
+
+ '=/
+ '"'
+&
+ !=%
+ / 
+note: CF, convention fertilization; SF, standard fertilization
+Table 5 Results of annual fertilizer input and annual average non-point pollution loads according to fertilization practices
+Fig. 4 Estimated annual total nitrogen and phosphorus loads over 30 years according to the convention fertilization (CF) and 
+standard fertilization (SF)
+
+------------------------------------
+22 • Journal of the Korean Society of Agricultural Engineers, 66(5), 2024. 9
+3. 고 찰
+본 연구의 APEX 모델은 보정기간 질소 부하량과 검정 기
+간인 부하량의 NSE 평가 지표에 대해 각각 0.30, 0.33으로 
+불만족 수준이었다 (Table 4). 농경지에서 양분 부하량을 모델
+링하는 것은 토양 유형, 관리 관행, 기상 패턴, 지형 위치 등 
+영향을 미치는 다양한 요인으로 인해 복잡할 수 있다 (Nelson 
+et al., 2017). APEX와 같은 과정 기반 모델은 이러한 동태를 
+장기간 모의하여 양분 부하를 평가하는 데 사용될 수 있다 
+(Nelson et al., 2017). NSE는 수문 모델의 예측력을 평가하는 
+데 있어 중요한 지표이며, 높은 NSE 값은 모델의 더 나은 예
+측력을 의미한다 (Nash and Sutcliffe, 1970). 그러나 NSE의 
+수용 기준은 모델링 시스템의 복잡성과 맥락에 따라 달라질 
+수 있다 (Ward et al., 2018; Moriasi et al., 2015b). 값이 1에 
+가까울수록 선호되지만, 모델링이 특히 어려운 상황에서는 
+낮은 NSE 값도 어느 정도 수용될 수 있다 (Moriasi et al., 2007; 
+Moriasi et al., 2015a). Wang et al. (2012) 연구에서 양분 부하
+와 관련한 모델 평가 기준은 NSE ≥ 0.50, PBIAS 50% 이내로 
+제시하였다. 이러한 이유로 Kumar et al. (2021)은 NSE가 0.45
+보다 크고 R2가 0.50보다 큰 경우를 보정 및 검증을 위한 평가 
+기준으로 만족한다고 보고하였다. 
+반면, Moriasi et al. (2015a)은 NSE ≤ 0.35는 만족할 수준은 
+아니지만, 허용 불가 수준 (NSE < 0.0)은 아니라고 보고하였
+다. Ramirez-Avila et al. (2017)은 NSE = 0.33, PBIAS = 44%에
+도 불구하고 모델 성능 기준에 충족한다고 보고하였고, 이를 
+활용하여 농경지 유출수를 모의하였다. 복잡한 농업 시스템
+에서 양분 유출 모델링을 위해 높은 NSE 값을 달성하는 것은 
+어려울 수 있다 (McCuen et al. 2006; Jain and Sudheer, 2008). 
+또한 NSE ≦ 0.35의 수용 여부는 특정 목표, 데이터 가용성, 
+연구의 공간적 및 시간적 규모, 그리고 모델 결과가 모델에 
+의해 정보화되는 관리나 정책 결정에 민감한지 여부에 따라 
+달라질 수 있다 (Moriasi et al., 2015a; Nelson et al., 2017; 
+Ward et al., 2018). 일반적으로 모델 관련 연구자들은 높은 
+NSE 값을 목표로 하지만, 모델 개발의 초기 단계나 특히 복잡
+한 시스템에서는 낮은 값임에도 불구하고 유용한 정보를 제
+공할 수 있다 (McCuen et al., 2006; Jain and Sudheer, 2008; 
+Moriasi et al., 2015a).
+본 연구에서 보정 단계의 T-N, 검정 단계의 T-P에 관한 
+NSE 값 0.33과 0.30의 경우, 일별 강우량 100 mm 이상 발생한 
+Fig. 5 Estimated average monthly total nitrogen (a) and total phosphorus (b) loads during 30 years
+
+------------------------------------
+한국농공학회논문집 제66권 제5호, 2024 • 23
+불 특정일에 질소와 인 유출량이 과대평가되어 나타난 결과
+로 판단된다. T-N의 경우 모의한 1460일 중 과대평가된 4일을 
+보정했을 때, NSE 수치는 0.65로 만족 수준 이상의 좋음 수준
+이며, T-P의 경우 730일 중 과대평가된 1일을 보정할 시 NSE 
+수치가 0.57로 만족 수준 이상으로 나타났다. 따라서 일부 
+NSE ≦ 0.35 항목은 정확한 모델 성능을 나타내지는 않지만, 
+복잡한 시나리오에서는 수용될 수 있음에 따라, 복잡한 환경 
+시스템 모델링에 내재된 한계와 불확실성을 인식하면서 모델
+의 예측 능력을 향상시키려는 노력을 계속되어야 할 것이라
+고 생각한다 (McCuen et al., 2006).
+본 연구에서 기존 농가는 표준 시비량에 비해 질소를 
+15.9% 추가하여 시비하였고, 인은 498.9% 추가 시비하는 것
+으로 나타났다. 이러한 농경지의 과다한 비료 투입은 환경적 
+측면에서 지표 및 지하수 오염, 수역의 부영양화 등 여러 가지 
+부정적 영향을 끼칠 수 있다 (Alori et al., 2017; Sharpley and 
+Beegle, 2017; Xia et al., 2020). 질소와 인이 과다하게 수역에 
+유입되면, 물속 식물성 플랑크톤의 과도한 증식을 유발할 수 
+있으며, 이는 수중 산소를 소비하고, 수질을 저하시켜 수생 
+동⋅식물의 생존을 어렵게 만든다 (Carpenter et al., 1998; 
+Smith, 2003; Xia et al., 2020). 미국의 경우 수질 저하된 호수 
+지역의 약 50%와 하천 유역의 약 60%에서 양분과잉 농축 문
+제가 관찰된 바 있다 (Smith, 2003). 또한 중국에서 주요 호수
+의 절반 이상이 부영양화 된 반면 거의 75%가 지속적으로 
+악화되고 있는 것으로 나타났다 (Sun et al., 2012). 하천 부영
+양화에 농업 비점오염원이 상당한 영향을 미칠 수 있기 때문
+에 과다한 비료 사용은 지양해야할 것으로 판단된다.
+국제적으로 식량안보에 따른 농업의 비료 사용은 불가피한 
+것이 사실이다. 하지만, 적정량 이상의 비료 투입은 작물 생산
+량 측면에서 장점만 있는 것은 아니다. 최적의 비료 사용은 
+물 환경 부하를 완화시키면서 최대 생산량을 이끌 수 있다 
+(Kang et al., 2018; Guo et al., 2022). Kang et al. (2018) 연구에 
+따르면 최적 시비는 관행시비보다 질소 및 인 투입량을 각각 
+50%, 53% 감소시켰지만, 수확량에는 영향을 미치지 않았으
+며, 질소 및 인 과잉을 60%, 59% 유의하게 감소시켰다고 보고
+하였다. Guo et al. (2022)의 글로벌 메타분석 연구에서도 질소 
+비료 투입 이후에 작물 생산량이 증가하였지만, 적정 범위 이
+후부터 작물 생산량이 감소한다고 보고한 바 있다. 이는 최적
+의 비료 사용의 필요성을 시사하며, 검정시비의 중요성을 시
+사한다. 다만, 사전 토양에 따른 질소 및 인에 대한 개별적인 
+시비처방과 농가에서 쉽게 활용할 수 있는 시스템 구축 및 
+개선안이 필요할 것이라고 판단된다.
+본 연구에서 시비수준에 따른 월별 인 부하량을 모의한 결
+과 관행시비는 표준시비보다 최대 375.5%까지 높아지는 것으
+로 분석되었다 (Fig. 5). 이는 해당 농가 토양의 이화학성을 
+고려하지 않고, 시판 비료에 제시된 사용량을 기준으로 투입
+하기 때문으로 판단된다. NAS (2020) 연구에서 사전 토양 분
+석을 통한 검정시비량과 실제 투입한 시비량을 비교한 결과 
+실제 투입한 비료의 양이 질소, 인산, 칼리 기준으로 옥수수가 
+0.4, 0.7, 5.2 kg/10 a, 배추가 4.6, 0.9, 5.7 kg/10 a 가량 추가로 
+투입되는 것으로 조사되었다. 벼 및 식량작물 재배 농가를 대
+상으로 화학비료의 종류 및 사용량을 조사한 결과, 비료의 종
+류로는 복합비료를 가장 많이 사용하였고, 옥수수의 경우 단
+위 면적당 투입량이 다른 작물보다 많았다 (NAS, 2020). 대부
+분의 농가에서 이미 유효인산의 함량이 적정 수준임에도 불
+구하고, 질소를 기준으로 복합비료를 투입함에 따라 토양의 
+인 함량이 매우 증가하여 인 유출로 이어졌다고 판단된다. 인
+은 작물의 필수 영양소 중 하나이지만, 과다한 인은 칼륨, 마
+그네슘, 칼슘과 같은 다른 영양소의 흡수를 방해하여 식물의 
+전반적인 영양 불균형과 토양 비옥도 고갈 및 독성으로 잎의 
+변색, 성장 정체 등을 초래할 수 있다 (Alori et al., 2017). 
+농경지에 투입된 인의 경우 2∼4주 안에 토양에 90%까지 
+고정되며, 이러한 인 손실을 최소화하기 위해서는 토양 검정
+에 따른 적정량의 시비와 함께 토양 침식 조절이 가장 중요하
+다 (Sharpley and Beegle, 2017). 농경지에서 작물 피복은 토양 
+침식을 줄이고, 토양 수분을 향상시키며, 양분 유출을 감소시
+킬 수 있기 때문에 이러한 관리 전략을 최대한 활용할 필요가 
+있다 (Durán Zuazo and Pleguezuelo, 2008). 또한, 최소경운과 
+같은 보존 농법, 윤작, 유기물 추가, 완충 식생대와 같은 다양
+한 토양 관리 전략을 개선하여 토양 구조 및 토양침식을 지속
+적으로 감소시킬 필요가 있다 (Xia et al., 2020; Singh et al., 
+2023). Jiao et al. (2011)은 밀-대두 윤작 재배 시 밀-휴경에 
+비해 유출량을 58%, 인 유출을 85% 감소시켰다고 보고하였
+다. Korucu et al. (2018)은 옥수수-대두 재배 시 호밀 피복은 
+지표수 유출량을 65% 감소시켰으며, 암모니아태 질소 
+(NH4-N)와 T-P 부하량을 86%, 83% 감소시켰다고 보고하였
+다. Hunt et al. (2019) 연구에서도 클로버와 알팔파 피복을 
+통해 지표 유출수 60%를 감소시켰고, 질소 및 인 유출량은 
+최대 39% 감소시켰다고 보고한 바 있다. 옥수수-대두 윤작재
+배 2년차에 질소 및 인의 부하량은 10 kgN/ha, 2.8 kgP/ha로서, 
+비료 투입량 (89 kgN/ha, 15 kgP/ha) 대비 11.2%, 18.6% 나타
+났다. 본 연구의 표준시비에 따른 질소 및 인의 부하량 7.6%, 
+33.8%와 비교할 때, 질소 부하량은 더 낮았지만 인 부하량은 
+상대적으로 높은 것으로 나타남에 따라 인에 대한 관리가 필
+요할 것으로 판단된다. 
+
+------------------------------------
+24 • Journal of the Korean Society of Agricultural Engineers, 66(5), 2024. 9
+4. 결 론
+본 연구에서는 APEX 모델을 이용하여 옥수수와 가을배추
+의 2모작 재배지에서 표준시비와 관행시비를 적용했을 때의 
+비점오염 부하량을 평가하였다. 질소 부하량 보정 결과 R2는 
+0.65, NSE 0.30, PBIAS 21.1%로 나타났고, 검정 기간 R2는 
+0.64, NSE는 0.42, PBIAS는 -20.8%였다. 인 부하량 보정의 경
+우 R2는 0.76, NSE 0.72, PBIAS -22.1%로 나타났으며, 검정 
+기간의 R2는 0.69, NSE 0.33, PBIAS 5.1%로 옥수수-가을배추
+의 비점오염 부하량 모의가 만족할만한 수준으로 나타났다. 
+표준시비를 적용할 경우 질소 및 인의 부하량이 4.6%, 69.8% 
+감소함을 확인할 수 있었다. 이는 표준시비를 통한 양분관리
+가 비점오염 저감에 중요한 역할을 할 수 있음을 시사한다. 
+다만, 본 연구에서 표준시비와 관행시비에 따른 작물 생산량
+을 정량적으로 비교하지 못한 것에 한계가 있다. 그럼에도 불
+구하고, 본 연구의 결과는 농업 현장에서 표준시비를 촉진하
+고, 관행시비를 점진적으로 줄여나가는 정책 마련에 있어 기
+초 자료로 활용될 수 있을 것으로 생각된다. 또한, 수질 보호
+와 농업 지속 가능성을 향상시키기 위한 관리 전략의 개발에 
+기여할 것으로 기대된다. 본 연구는 비점오염 부하량을 평가
+하기 위해 APEX 모델을 국내 농업 시스템에 적용한 결과로
+써, 향후 연구에서는 다양한 작물 및 지역에 대한 확대 적용을 
+통해 모델의 범용성과 정확성을 더욱 향상시킬 필요가 있다. 
+아울러, 토양 관리, 작물 관리, 물 관리 등 재배관리 측면에서의 
+비점오염 관리 전략에 관한 평가가 필요할 것으로 판단된다.
+감사의 글
+This work was carried out with the support of the 
+“Cooperative Research Program for Agriculture Science and 
+Technology Development (Project No. RS-2020-RD009348)” 
+Rural Development Administration, Republic of Korea.
+REFERENCES
+1.
+Alori, E. T., B. R. Glick, and O. O. Babalola, 2017. 
+Microbial phosphorus solubilization and its potential for 
+use in sustainable agriculture. Frontiers in Microbiology 
+8: 1-8. doi: 10.3389/fmicb.2017.00971.
+2.
+Baffaut, C., F. Ghidey, R. N. Lerch, N. R. Kitchen, K. 
+A. Sudduth, and E. J. Sadler, 2019. Long-term simulated 
+runoff and water quality from grain cropping systems on 
+restrictive layer soils. Agricultural Water Management 
+213: 36-48. doi: 10.1016/j.agwat.2018.09.032.
+3.
+Bazrkar, M. H., E. O. Danquah, S. K. Choi, M. K. Kim, 
+J. Jeong, and J. Cho, 2023. Projected unseasonable and 
+shorter actual growth period for paddy rice and more 
+pollutant loads into water bodies in a changing climate. 
+Agricultural Water Management 279: 108211. doi: 
+10.1016/j.agwat.2023.108211.
+4.
+Bhandari, A. B., N. O. Nelson, D. W. Sweeney, C. 
+Baffaut, J. A. Lory, A. Senaviratne, G. M. Pierzynski, K. 
+A. Janssen, and P. L. Barnes, 2017. Calibration of the 
+APEX model to simulate management practice effects on 
+runoff, sediment, and phosphorus loss. Journal of 
+Environmental Quality 46(6): 1332-1340. doi: 10.2134/
+jeq2016.07.0272.
+5.
+Carpenter, S. R., N. F. Caraco, D. L. Correll, R. W. 
+Howarth, A. N. Sharpley, and V. H. Smith, 1998. 
+Nonpoint pollution of surface waters with phosphorus and 
+nitrogen. Ecological Applications 8(3): 559-568. doi: 
+10.1890/1051-0761(1998)008[0559:NPOSWW]2.0.CO;2.
+6.
+Choi, S. K., M. K. Kim, J. Jeong, D. Choi, and S. O. 
+Hur, 2017. Estimation of crop yield and evapotranspira-
+tion in paddy rice with climate change using 
+APEX-Paddy model. Journal of the Korean Society of 
+Agricultural Engineers 59(4): 27-42. doi: 10.5389/KSAE.
+2017.59.4.027. (in Korean).
+7.
+Choi, S. K., J. Cho, J. Jeong, M. K. Kim, S. J. Yeob, 
+S. Jo, O. D. Eric, and J. H. Bang, 2021. Assessing future 
+water demand for irrigating paddy rice under shared 
+socioeconomic pathways (SSPs) scenario using the 
+APEX-Paddy model. Journal of the Korean Society of 
+Agricultural Engineers 63(6): 1-16. doi: 10.5389/KSAE.
+2021.63.6.001. (in Korean).
+8.
+Cui, N., M. Cai, X. Zhang, A. A. Abdelhafez, L. Zhou, 
+H. Sun, G. Chen, G. Zou, and S. Zhou, 2020. Runoff 
+loss of nitrogen and phosphorus from a rice paddy field 
+in the east of China: Effects of long-term chemical N 
+fertilizer and organic manure applications. Global Ecology 
+and Conservation 22: e01011. doi: 10.1016/j.gecco.2020.
+e01011.
+9.
+Ding, W., J. Xia, D. She, X. Zhang, T. Chen, S. Huang, 
+and H. Zheng, 2023. Assessing multivariate effect of best 
+management practices on non-point source pollution 
+management using the coupled Copula-SWAT model. 
+Ecological Indicators 153: 110393. doi: 10.1016/
+j.ecolind.2023.110393.
+10. Durán Zuazo, V. H., and C. R. R. Pleguezuelo, 2008. 
+
+------------------------------------
+한국농공학회논문집 제66권 제5호, 2024 • 25
+Soil-erosion and runoff prevention by plant covers: A 
+review. Agronomy for Sustainable Development 28: 65-86.
+11. Gassman, P. W., J. R. Williams, X. Wang, A. Saleh, E. 
+Osei, L. M. Hauck, R. C. Izaurralde, and J. D. Flowers, 
+2009. The agricultural policy/environmental eXtender 
+(APEX) model: An emerging tool for landscape and 
+watershed environmental analyses. Transactions of the 
+ASABE 53(3): 711-740.
+12. Guo, C., X. Liu, and X. He, 2022. A global meta-analysis 
+of crop yield and agricultural greenhouse gas emissions 
+under nitrogen fertilizer application. Science of the Total 
+Environment 831: 154982. doi: 10.1016/j.scitotenv.2022.
+154982.
+13. Gupta, H. V., S. Sorooshian, and P. O. Yapo, 1999. Status 
+of 
+automatic 
+calibration 
+for 
+hydrologic 
+models: 
+Comparison with multilevel expert calibration. Journal of 
+Hydrologic Engineering 4(2): 135-143. doi: 10.1061/
+(asce)1084-0699(1999)4:2(135).
+14. Hong, S. C., M. K. Kim, G. B. Jung, and K. H. So, 2016. 
+Furrow covering effects with rice straw on nutrient 
+discharge from upland soil used for red pepper 
+cultivation. Journal of the Korea Organic Resource 
+Recycling Association 24(1): 11-19. doi: 10.17137/korrae.
+2016.24.1.11. (in Korean).
+15. Hunt, N. D., J. D. Hill, and M. Liebman, 2019. Cropping 
+system diversity effects on nutrient discharge, soil 
+erosion, and agronomic performance. Environmental 
+Science and Technology 53(3): 1344-1352. doi: 10.1021/
+acs.est.8b02193.
+16. Jain, S. K., and K. P. Sudheer, 2008. Fitting of hydrologic 
+models: A close look at the Nash-Sutcliffe Index. Journal 
+of Hydrologic Engineering 13(10): 981-986. doi: 10.1061/
+(ASCE)1084-0699(2008)13:10(981).
+17. Jiao, P., D. Xu, S. Wang, and T. Zhang, 2011. Phosphorus 
+loss by surface runoff from agricultural field plots with 
+different 
+cropping 
+systems. 
+Nutrient 
+Cycling 
+in 
+Agroecosystems 90(1): 23-32. doi: 10.1007/s10705-
+010-9409-x.
+18. Kamruzzaman, M., J. Cho, S. K. Choi, J. H. Song, I. 
+Song, and S. Hwang, 2020. Evaluating the performance 
+of APEX-PADDY model using the monitoring data of 
+paddy fields in South Korea. Journal of the Korean 
+Society of Agricultural Engineers 62(1): 1-16. doi: 
+10.5389/KSAE.2020.62.1.001. (in Korean).
+19. Kang, L., B. Fan, S. Chen, and Q. Chen, 2018. Fertigation 
+combined with catch crop maximize vegetable yield and 
+minimize N and P surplus. Nutrient Cycling in 
+Agroecosystems 112(1): 87-99. doi: 10.1007/s10705-
+018-9932-8.
+20. Kim, M. K., S. I. Kwon, G. B. Jung, S. C. Hong, M. 
+J. Chae, S. G. Yun, and K. H. So, 2013. Small-scale pond 
+effects on reducing pollutants load from a paddy field. 
+Korean Journal of Environmental Agriculture 32(4): 
+359-358. doi: 10.5338/KJEA.2013.32.4.355. (in Korean).
+21. Kim, M. H., S. K. Choi, J. P. Cho, M. K. Kim, J. U. 
+Eo, J. H. Bang, and J. M. Seong, 2021. Report on the 
+climate change impact and vulnerability assessment on 
+agricultural 
+environment 
+and 
+ecology. 
+Phase 
+I 
+(2016-2020). National Institute of Agricultural Science, 
+Wanju, 305 pp. (in Korean).
+22. Koo, J. Y., J. Kim, S. K. Choi, M. K. Kim, J. Jeong, 
+and K. J. Lim, 2017. Construction of database for 
+application of APEX model in Korea and evaluation of 
+applicability to highland field. Journal of the Korean 
+Society of Agricultural Engineers 59(6): 89-100. doi: 
+10.5389/KSAE.2017.59.6.089. (in Korean).
+23. Korucu, T., M. J. Shipitalo, and T. C. Kaspar, 2018. Rye 
+cover crop increases earthworm populations and reduces 
+losses of broadcast, fall-applied, fertilizers in surface 
+runoff. Soil and Tillage Research 180(March): 99-106. 
+doi: 10.1016/j.still.2018.03.004.
+24. Kumar, S., R. P. Singh, and J. G. Kalambukattu, 2021. 
+Modeling daily surface runoff, sediment and nutrient loss 
+at 
+watershed 
+scale 
+employing 
+Arc-APEX 
+model 
+interfaced with GIS: A case study in Lesser Himalayan 
+landscape. Environmental Earth Sciences 80(15): 1-17. 
+doi: 10.1007/s12665-021-09791-4.
+25. Lee, J. H., and Y. M. Yoon, 2019. Comparison of nutrient 
+balance and nutrient loading index for cultivated land 
+nutrient management. Korean Journal of Environmental 
+Biology 37(4): 217-227. doi: 10.11109/JAES.2021.23.
+2.085. (in Korean).
+26. Liu, Y., B. A. Engel, D. C. Flanagan, M. W. Gitau, S. 
+K. McMillan, and I. Chaubey, 2017. A review on 
+effectiveness of best management practices in improving 
+hydrology and water quality: Needs and opportunities. 
+Science of the Total Environment 601-602: 580-593. doi: 
+10.1016/j.scitotenv.2017.05.212.
+27. McCuen, R. H., Z. Knight, and A. G. Cutter, 2006. 
+Evaluation of the Nash-Sutcliffe efficiency index. Journal 
+
+------------------------------------
+26 • Journal of the Korean Society of Agricultural Engineers, 66(5), 2024. 9
+of Hydrologic Engineering 11(6): 597-602. doi: 10.1061/
+(ASCE)1084-0699(2006)11:6(597).
+28. ME, 2015. The 2nd basic plan for the management of 
+water environment. Ministry of Environment, Sejong, 
+Korea. (in Korean).
+29. Moriasi, D. N., R. W. Zeckoski, J. G. Arnold, C. B. 
+Baffaut, R. W. Malone, P. Daggupati, J. A. Guzman, D. 
+Saraswat, Y. Yuan, B. W. Wilson, A. Shirmohammadi, 
+and K. R. Douglas-Mankin, 2015a. Hydrologic and water 
+quality models: Key calibration and validation topics. 
+Transactions of the ASABE 58(6): 1609-1618. doi: 
+10.13031/trans.58.11075.
+30. Moriasi, D. N., M. W. Gitau, N. Pai, and P. Daggupati, 
+2015b. 
+Hydrologic 
+and 
+water 
+quality 
+models: 
+Performance 
+measures 
+and 
+evaluation 
+criteria. 
+Transactions of the ASABE 58(6): 1763-1785. doi: 
+10.13031/trans.58.10715.
+31. Moriasi, D. N., J. G. Arnold, M. W. Van Liew, R. L. 
+Bingner, R. D. Harmel, and T. L. Veith, 2007. Model 
+evaluation guidelines for systematic quantification of 
+accuracy in watershed simulations. Transactions of the 
+ASABE 50(3): 885-900. doi: 10.13031/2013.23153.
+32. Mudgal, A., C. Baffaut, S. H. Anderson, E. J. Sadler, N. 
+R. Kitchen, K. A. Sudduth, and R. N. Lerch, 2012. Using 
+the Agricultural Policy/Environmental eXtender to 
+develop and validate physically based indices for the 
+delineation of critical management areas. Journal of Soil 
+and Water Conservation 67(4): 284-299. doi: 10.2489/
+jswc.67.4.284.
+33. Murdoch, P. S., J. S. Baron, and T. L. Miller, 2000. 
+Potential effects of climate change on surface-water 
+quality in North America. Journal of the American Water 
+Resources Association 36(2): 347-366. doi: 10.1111/
+j.1752-1688.2000.tb04273.x.
+34. Nam, Y. H., S. W. An, and J. W. Park, 2011. Nitrogen 
+budget of South Korea in 2008: Evaluation of non-point 
+source pollution and N2O emission. Journal of Korean 
+Society of Environmental Engineers 33(2): 103-112. doi: 
+10.4491/ksee.2011.33.2.103. (in Korean).
+35. NAS, 2019. Standards for fertilization by crops. National 
+Institute of Agricultural Science, Wanju, Korea. (in 
+Korean).
+36. NAS, 2020. Monitoring project on agri-environmental 
+quality in Korea. National Institute of Agricultural 
+Science, Wanju, Korea. (in Korean).
+37. Nash, J. E., and J. V. Sutcliffe, 1970. River flow 
+forecasting through conceptual models part I - A 
+discussion of principles. Journal of Hydrology 10(3): 
+282-290. doi: 10.1016/0022-1694(70)90255-6.
+38. Nelson, N. O., C. Baffaut, J. A. Lory, G. M. M. M. 
+Anomaa Senaviratne, A. B. Bhandari, R. P. Udawatta, D. 
+W. Sweeney, M. J. Helmers, M. W. Van Liew, A. P. 
+Mallarino, and C. S. Wortmann, 2017. Multisite 
+evaluation of APEX for water quality: II. Regional 
+parameterization. Journal of Environmental Quality 46(6): 
+1349-1356. doi: 10.2134/jeq2016.07.0254.
+39. Ramirez-Avila, J. J., D. E. Radcliffe, D. Osmond, C. 
+Bolster, A. Sharpley, S. L. Ortega-Achury, A. Forsberg, 
+and J. L. Oldham, 2017. Evaluation of the APEX model 
+to simulate runoff quality from agricultural fields in the 
+southern region of the United States. Journal of 
+Environmental Quality 46(6): 1357-1364. doi: 10.2134/
+jeq2017.07.0258.
+40. Salaudeen, A. R., S. Shahid, A. Ismail, B. K. Adeogun, 
+M. A. Ajibike, A. A. D. Bello, and O. B. E. Salau, 2023. 
+Adaptation measures under the impacts of climate and 
+land-use/land-cover 
+changes 
+using 
+HSPF 
+model 
+simulation: Application to Gongola river basin, Nigeria. 
+Science of the Total Environment 858(October 2022): 
+159874. doi: 10.1016/j.scitotenv.2022.159874.
+41. Sharpley, A., and D. Beegle, 2017. Managing phosphorus 
+for agriculture and the environment. PA 16802, USA, 
+1-15 pp.
+42. Singh, S. K., D. K. Vishwakarma, S. Ali Abed, N. 
+Al-Ansari, P. S. Kashyap, A. Kumar, P. Kumar, R. 
+Kumar, R. Jat, A. Saraswat, A. Kuriqi, A. Elbeltagi, S. 
+Heddam, and S. Kim, 2023. Soil erosion control from 
+trash residues at varying land slopes under simulated 
+rainfall 
+conditions. 
+Mathematical 
+Biosciences 
+and 
+Engineering 20(6): 11403-11428. doi: 10.3934/mbe.
+2023506.
+43. Smith, V. H., 2003. Eutrophication of freshwater and 
+coastal 
+marine 
+ecosystems: 
+A 
+global 
+problem. 
+Environmental Science and Pollution Research 10(2): 
+126-139. doi: 10.1065/espr2002.12.142.
+44. Song, J. H., I. Song, J. T. Kim, and M. S. Kang, 2015. 
+Simulation of agricultural water supply considering yearly 
+variation of irrigation efficiency. Journal of the Korea 
+Water Resources Association 48(6): 425-438. doi: 
+10.3741/JKWRA.2015.48.6.425. (in Korean).
+
+------------------------------------
+한국농공학회논문집 제66권 제5호, 2024 • 27
+45. Sun, B., L. Zhang, L. Yang, F. Zhang, D. Norse, and Z. 
+Zhu, 2012. Agricultural non-point source pollution in 
+China: Causes and mitigation measures. Ambio 41(4): 
+370-379. doi: 10.1007/s13280-012-0249-6.
+46. Tuppad, P., C. Santhi, X. Wang, J. R. Williams, R. 
+Srinivasan, and P. H. Gowda, 2010. Simulation of 
+conservation practices using the APEX model. Applied 
+Engineering 
+in 
+Agriculture 
+26(5): 
+779-794. 
+doi: 
+10.13031/2013.34947.
+47. Wang, X., P. W. Gassman, J. R. Williams, S. Potter, and 
+A. R. Kemanian, 2008. Modeling the impacts of soil 
+management practices on runoff, sediment yield, maize 
+productivity, and soil organic carbon using APEX. Soil 
+and Tillage Research 101(1-2): 78-88. doi: 10.1016/
+j.still.2008.07.014.
+48. Wang, X., J. R. Williams, P. W. Gassman, C. Baffaut, 
+R. C. Izaurralde, J. Jeong, and J. R. Kiniry, 2012. EPIC 
+and APEX: Model use, calibration, and validation. 
+Transactions of the ASABE 55(4): 1447-1462. doi: 
+10.13031/2013.42253.
+49. Ward, N. K., F. Maureira, C. O. Stöckle, E. S. Brooks, 
+K. M. Painter, M. A. Yourek, and C. K. Gasch, 2018. 
+Simulating 
+field-scale 
+variability 
+and 
+precision 
+management with a 3D hydrologic cropping systems 
+model. Precision Agriculture 19(2): 293-313. doi: 
+10.1007/s11119-017-9517-6.
+50. Williams, J. R., R. C. Izaurralde, V. P. Singh, and D. 
+K. Frevert, 2006. The APEX model. In Singh, V. P., and 
+D. K. Frevert (Eds.), pp.437-482. CRC Press.
+51. Williams, J. R., and R. C. Izaurralde, 2010. The APEX 
+model. In Singh, V. P., and D. K. Frevert (Eds.), (1st 
+ed., pp.461-506). CRC Press, Florida, USA.
+52. Williams, J. R., R. C. Izaurralde, and E. M. Steglich, 
+2012. Agricultural policy/environmental extender model 
+theoretical documentation version 0806. Texas A&M 
+Blackland Research Center, Temple, TX.
+53. Xia, Y., M. Zhang, D. C. W. Tsang, N. Geng, D. Lu, 
+L. Zhu, A. Deshani Igalavithana, P. D. Dissanayake, J. 
+Rinklebe, X. Yang, and Y. S. Ok, 2020. Recent advances 
+in control technologies for non-point source pollution 
+with nitrogen and phosphorus from agricultural runoff: 
+Current practices and future prospects. Applied Biological 
+Chemistry 63(8): 1-13. doi: 10.1186/s13765-020-0493-6.
+54. Xingpo, L., L. Muzi, C. Yaozhi, T. Jue, and G. Jinyan, 
+2021. 
+A 
+comprehensive 
+framework 
+for 
+HSPF 
+hydrological parameter sensitivity, optimization and 
+uncertainty evaluation based on SVM surrogate model - 
+A case study in Qinglong River watershed, China. 
+Environmental Modelling and Software 143: 105126. doi: 
+10.1016/j.envsoft.2021.105126.
+55. KMA, 2023. https://data.kma.go.kr/climate/average30
+Years/selectAverage30YearsKoreaList.do?pgmNo=188.
+56. NAS, 2023. http://soil.rda.go.kr/soilseriesKor/J/JIGOGk.
+htm.
+57. OECD, 2024. https://data.oecd.org/agrland/nutrient-balance. 
+htm#indicator-chart.
+58. RDA, 2022. https://www.nongsaro.go.kr/portal/portalMain. 
+ps?menuId=PS00001.
+
+------------------------------------

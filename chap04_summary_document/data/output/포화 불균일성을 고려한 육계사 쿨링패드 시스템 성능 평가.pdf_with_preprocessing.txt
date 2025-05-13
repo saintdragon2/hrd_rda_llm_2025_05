@@ -1,0 +1,704 @@
+DOI : https://doi.org/10.5389/KSAE.2024.66.6.037 
+ISSN 1738-3692 | eISSN 2093-7709
+한국농공학회논문집 제66권 제6호, 2024 • 37
+포화 불균일성을 고려한 육계사 쿨링패드 시스템 성능 평가
+Evaluation of Performance on Cooling Pad System According to 
+Non-uniform Saturation of in Broiler House
+박진선a⋅최락영b⋅이세연b⋅Daniel Kehinde Favourb⋅이채린b⋅박지연b⋅홍세운c,†
+Park, Jinseon⋅Choi, Lak-Yeong⋅Lee, Se-Yeon⋅Favour, Daniel Kehinde⋅Lee, Chae-Rin⋅Park, Ji-Yeon⋅Hong, Se-Woon
+ABSTRACT
+Heat stress in broiler houses during the summer can lead to reduced feed intake and feed efficiency, ultimately resulting in decreased productivity. To 
+mitigate heat stress, cooling pads utilizing the evaporative cooling effect have been introduced in commercial broiler houses. In this study, the 
+performance of cooling pads in an actual broiler house was evaluated, and a wind tunnel equipment was designed to precisely analyze their performance. 
+The results revealed that in the broiler house with long cooling pads, the uneven distribution of water led to a decrease in cooling efficiency. 
+Specifically, cooling efficiency was 81% when the cooling pads were wet enough but decreased to 49.6% as the water supply to the cooling pads was 
+not proper. Furthermore, wind tunnel experiments showed that as the airflow speed increased from 0.64 mㆍs-1 to 1.86 mㆍs-1, the temperature reduction 
+decreased from 8.3 °C to 6.6 °C. However, the mass transfer coefficient and heat transfer coefficient increased by 0.0019 mㆍh⁻¹ and 37.32 
+Wㆍm-²ㆍK⁻¹, respectively, indicating more active evaporation and greater heat removal due to higher airflow speed. Additionally, as relative humidity 
+increased, the temperature reduction significantly decreased. When water was unevenly distributed across the cooling pad, the temperature reduction and 
+cooling efficiency in areas without water were significantly reduced. These findings highlight the importance of maintaining uniform water distribution 
+over the cooling pads to ensure desired cooling effects.
+Keywords: Evaporative cooling pad; cooling efficiency; heat/mass transfer; broiler house; wind tunnel
+Ⅰ. 서 론
+육계사에서 환경 조절은 생산성과 직결되는 중요한 요소
+로, 특히 여름철 고온 환경에서 그 중요성이 더욱 강조된다. 
+가축 중 육계는 몸이 털로 덮여 있고 땀샘이 없다는 특징을 
+가지고 있어, 체내 열을 효율적으로 발산하지 못한다. 이러한 
+이유로 여름철에는 고온스트레스에 특히 취약하며, 이로 인
+해 적절한 사양 관리가 필수적이다 (Song and King, 2015). 
+고온스트레스에 노출될 경우, 육계의 건강을 악화시켜, 사료 
+섭취와 체중 증가량이 감소하며, 이는 결국 생산성 저하와 사
+료 효율 감소를 유발시킬 수 있다 (Teeter and Belay, 1996). 
+따라서 여름철 고온스트레스를 저감시키기 위해 육계사 내의 
+온도 조절이 중요하며, 이를 위해 내부 온도를 효과적으로 냉
+각할 수 있는 시스템의 도입은 육계의 성장률을 유지하는 데 
+필수적이다.
+냉각 시스템은 공기를 냉각하는 원리에 따라 다양한 방식
+이 있으며, 이 중 증발냉각방식의 쿨링패드 시스템은 고온의 
+실외 공기를 냉각시켜 유입시키는 방법으로 경제적이며 효과
+적인 기술 중 하나이다 (Liao and Chiu, 2002). 쿨링패드 시스
+템은 다공성 매체가 물을 흡수하여 포화 된 상태를 유지할 
+때, 매체를 통과하는 공기가 물을 증발시키는 과정에서 증발
+잠열에 의한 공기의 냉각을 유도하는 원리로 작동한다 (Jain 
+and Hindoliya, 2011). 또한 냉각 효과가 최대로 이루어진다면 
+통과하는 공기의 건구 온도가 습구 온도에 가깝게 도달하게 
+된다 (Tejero-González and Franco-Salas, 2021). 유사한 원리로 
+공기 흐름 내에 물을 직접 분사할 수도 있으나, 쿨링패드와 
+같이 습한 매체에 공기를 통과시키며 증발 냉각 효과를 기대
+하는 것이 물을 공기 중에 분사하는 것에 비해 물의 증발 속도
+가 향상되어 냉각 효과가 향상될 수 있다고 알려져 있다 
+(Naveenprabhu and Suresh, 2020). 이와 같은 기능적 장점이 
+a Research Professor, AgriBio Institute of Climate Change Management, 
+Chonnam National University
+b Graduate Student, Department of Rural and Bio-systems Engineering 
+& Education and Research Unit for Climate-Smart Reclaimed-Tideland 
+Agriculture (BK21 four), Chonnam National University
+c Associate Professor, Department of Rural and Bio-systems Engineering 
+& Education and Research Unit for Climate-Smart Reclaimed-Tideland 
+Agriculture (BK21 four), Chonnam National University
+† Corresponding author
+  Tel.: +82-62-530-2183 
+E-mail: hsewoon@jnu.ac.kr 
+Received: October 05, 2024
+Revised: October 25, 2024
+Accepted: November 04, 2024
+
+------------------------------------
+38 • Journal of the Korean Society of Agricultural Engineers, 66(6), 2024. 11
+강조됨에 따라 쿨링패드의 냉각 효율을 평가하는 연구가 지
+속적으로 이루어지고 있다. 
+Dağtekin 등은 실제 육계사에서 쿨링패드는 70%의 냉각 
+효율을 나타내어 실내 기온을 충분히 낮출 수 있지만, 상대습
+도가 높은 조건에서는 냉각 효율이 저하된다고 보고하였다 
+(Dağtekin et al., 2009b). 또한 쿨링패드 시스템을 활용할 경우, 
+실외 공기 온도를 평균 5.19 oC 낮출 수 있는 것으로 확인하였
+으며, 유입된 공기가 내부 공간을 통과하면서 터널팬으로 배
+출될 때까지 온도는 1.52 oC 정도 증가하는 것으로 나타났다 
+(Dağtekin et al., 2009a). 또한 쿨링패드에 공급되는 수온이 50 
+oC에서 10 oC로 낮아짐에 따라 쿨링패드에서 증발되는 물의 
+양이 73% 증가하여 냉각 효율이 향상되는 것을 확인하였는
+데, 이는 공급수의 수온이 쿨링패드 성능 개선에 기여할 수 
+있음을 시사한다 (Simmons and Lott, 1996). 또한 쿨링패드의 
+두께를 늘리면, 증발잠열과 공기의 전달 시간이 길어져 냉각 
+효율이 향상할 수 있다 (Liao and Chiu, 2002; Wu et al., 2009).
+한편 쿨링패드의 공기 냉각 원리를 고려할 때 쿨링패드에 
+충분한 수량의 공급을 통한 균일한 포화도 유지는 쿨링패드 
+성능을 결정짓는 주요한 요인이 될 수 있다. 실제 농가에서 
+쿨링패드는 시설 방향에 따라 한 방향으로 길게 연결하여 시
+공하고, 용수공급을 위한 펌프는 한쪽 끝단에 설치하는 것이 
+일반적이다. 이와 같은 시공 방식과 펌프 용량 부족, 노즐 막
+힘 현상으로 쿨링패드 전면에 용수공급이 균일하게 적용되지 
+못할 우려가 있고, 이렇게 불균일한 포화도는 시스템의 냉각 
+효율을 급격히 저하시킬 수 있으나, 이에 대한 성능저하를 정
+량적으로 평가한 연구는 미흡한 실정이다. 이처럼 쿨링패드
+의 냉각 효율은 쿨링패드를 통과하는 공기 및 공급되는 물의 
+특성, 재료의 포화도 등 다양한 요인에 따라 변동할 수 있기 
+때문에 온습도 및 포화도 정도에 따라 쿨링패드 성능 변화를 
+측정하고, 개선안을 검토해 볼 필요가 있다. 
+쿨링패드 냉각 효율 측정은 실제 육계사를 대상으로 온습
+도의 변화 및 포화도의 차이가 발생할 때 측정하는 것이 타당
+하나, 육계사 내부에 발생한 난류로 인해 냉각된 공기가 기존
+의 실내 공기와 섞이거나, 가축과 건물 외벽으로부터 전도와 
+대류에 의한 열전달로 인하여 내부 온습도 분포가 달라질 경
+우 쿨링패드 시스템의 증발잠열에 의한 냉각 효과를 정확히 
+파악하기 어렵다. 여러 연구에서는 실제 축산 시설에서 쿨링
+패드의 성능 연구의 어려움을 보완하기 위하여 실내 풍동을 
+이용하여 쿨링패드의 증발잠열 현상을 보다 정확히 분석하고
+자 하였으며, 이를 통해 쿨링패드의 효과적인 적용 방안을 모
+색하고 있다 (Malli et al., 2011; Liao and Chiu, 2002; Simmons 
+and Lott, 1996; Wu et al., 2009). 쿨링패드의 냉각 효율은 쿨링
+패드를 통과하는 공기의 성질 및 수온 등 다양한 요인에 따라 
+변동될 수 있으며, 효율이 가장 높은 상태를 실제 육계사에 
+적용할 경우 쿨링패드의 성능을 높일 수 있을 것이라 기대된
+다. 하지만, 실제 육계사에서 드러난 문제점인 쿨링패드의 불
+충분한 포화도에 따른 쿨링패드의 냉각 효과가 저하되는 정
+도에 대해서는 실내 실험에 의해서도 아직 정량적으로 검토
+된 바가 없어 육계사의 고온스트레스를 경감하기 위한 쿨링
+패드의 활용에 어려움이 많다.
+따라서 본 연구에서는 실제 육계사에서 사용되고 있는 쿨
+링패드의 냉각 효과를 현장 실험과 실내 실험으로 평가하고, 
+쿨링패드의 불충분한 포화도에 따른 냉각 성능의 변화를 분
+석하고자 하였다. 현장 실험을 통해 육계사 내 쿨링패드의 현
+실적인 문제점을 조사하였으며, 실내 풍동 장치를 이용하여 
+공기의 온습도와 유속 및 물에 의한 포화 불균일도에 따른 
+쿨링패드의 성능 변화를 평가하였다. 또한 이러한 결과로부
+터 실제 육계사에서 쿨링패드의 효과적인 활용 방안을 모색
+하고자 하였다.
+Ⅱ. 재료 및 방법
+1. 대상농장 위치 및 현황
+대상 육계사는 전북특별자치도 남원시에 위치한 강제환기
+식 무창 육계사이며 육계사의 쿨링패드 및 환기시스템 위치
+는 Fig. 1과 같다. 육계사의 규모는 길이 87 m, 폭 14 m의 
+육계 3만 수 사육이 가능하다. 환기는 14개의 터널팬 (EM50, 
+Munters, Sweden)과 5개의 크로스팬 (EM36, Munters, 
+Sweden)으로 배기하며, 60여 개의 측면 입기구와 양측의 쿨링
+패드 600×1500×150 (L×H×T, mm)에서 공기를 유입한다.
+2. 쿨링패드 시스템의 성능 평가 방법
+가. 현장 쿨링패드 시스템 운영 조건 및 성능 평가 방법
+대상 농장에 운영 중인 쿨링패드는 24 m 전체 길이의 약 
+28%에 해당하며, 40장의 쿨링패드를 연결하여 시공하였다. 
+본 연구에서는 쿨링패드의 성능을 측정하기 위해 여름철 실
+외 기온이 35 oC 이상인 조건에서 실시하였으며, 14개의 터널
+팬을 모두 가동한 상태에서 수행하였다. 쿨링패드와 입기구
+의 조건은 기존 육계사의 환기 조건과 동일하게 수행하였으
+며, 입기구를 전부 열고, 음압이 0.09∼0.15 inch-H2O를 유지
+하도록 쿨링도어를 열어 환기를 실시하였다. 음압은 내부 공
+기 유입은 원활하게 유지하면서 실내 가축의 생체 자극은 최
+소화하는 적정 값으로 농장의 규모와 사육두수 등을 반영하
+여 농장주의 경험을 바탕으로 설정된다. 용수공급 펌프는 시
+설 입구방향에 설치되어 있고, 용수공급은 5분 간격으로 작동
+
+------------------------------------
+한국농공학회논문집 제66권 제6호, 2024 • 39
+하며, 1분 동안 물을 공급하고, 4분은 물을 공급하지 않는 방
+식으로 작동한다. 측정은 10분동안 2주기의 용수공급 후 수행
+하였으며, 이때, 실외 공기의 습도는 37∼39%이었으며, 온도
+는 34.2∼38.9 oC로 나타났다.
+쿨링패드의 성능은 열화상 카메라 (Testo872, Testo SE & 
+Co.KGaA, Germany)를 활용하여 포화 불균일도를 정량화하
+고, 내외부의 온습도 변화를 측정하여 냉각 효율과 기온 감소
+량을 산정하여 평가하였다. 쿨링패드 포화 불균일도의 정량
+화는 취득한 열화상 이미지를 영상 분석 프로그램인 Image 
+J™(NIH, Bethesda, MD, USA)를 이용하여 펌프로부터의 거리
+에 따라 포화 된 비율을 산정하였다. 또한 쿨링패드의 국부적 
+온도 저감효과 측정은 쿨링패드 전 구간 중 세 지점을 선정하
+여 측정하였으며, 풍량, 유입되는 실외 공기의 온습도, 쿨링패
+드를 통과한 공기의 온습도를 측정하여 쿨링패드의 냉각 효
+율과 기온 감소량을 비교하였다. 
+나. 실내 풍동을 활용한 쿨링패드의 성능 평가
+쿨링패드의 불균일한 포화상태를 재현하여 쿨링패드의 성
+능을 평가하기 위해 환경 조절이 가능한 실내 풍동을 Fig. 3과 
+같이 제작하여 실험을 수행하였다 (Laknizi et al., 2019). 쿨링
+패드의 증발 냉각 효과를 분석하기 위해 풍동에 쿨링패드와 
+물의 공급량을 조절할 수 있는 물 순환 장치를 연결하였고, 
+ 	 
+
+  
+ 	 	
+  
+
+  
+ 	 	
+ 	  
+
+ 	 
+  
+Fig. 2 Photos of cooling pad installation and experimental measurements
+Fig. 1 Schematic view of a broiler house for cooling pad performance testing
+
+------------------------------------
+40 • Journal of the Korean Society of Agricultural Engineers, 66(6), 2024. 11
+물 순환 장치에 연결된 파이프에는 일정한 간격으로 구멍을 
+만들어 쿨링패드 상단에 균일한 양의 물을 공급할 수 있도록 
+하였으며, 쿨링패드가 포화되어 표면에 머무르지 않고 흘러 
+내리는 물은 패드 아래의 저장조로 흘러 순환 공급되도록 설
+계하였다. 쿨링패드의 규격은 1500×600×150 (L×H×T, mm)이
+며, 본 연구에서는 350×350×150 (L×H×T, mm)으로 재단하여 
+활용하였다. 쿨링패드 전면과 후면에 온습도 측정 센서(Hobo 
+MX2301A, Onset Computer Corp., USA)를 설치하여 쿨링패
+드 통과 전후의 온도와 상대습도를 측정하였다. 센서의 정확
+도는 온도 ±0.2 oC, 상대습도 ± 2.5%이며, 1초 간격으로 측정
+하였다. 풍동의 공기 흐름은 가변식 팬 (SLF-300D, Sung I1 
+E-B Corp.)을 설치하여 풍속을 제어할 수 있도록 하였으며, 
+풍량계 (Testo 420, Testo SE & Co.KGaA, Germany)를 설치하
+여 실험 지속 시간동안 풍량과 풍속을 측정하였다. 가변식 팬 
+전면에 허니콤과 스크린 네트를 설치하여 풍동에 공급되는 
+바람의 난류를 줄이고 균일성을 높이고자 하였다. 펌프는 DC 
+12 V 80 W (DWP-802U 7LPM, Motorbank, China) 용량을 활
+용하였고, 분당 최대 토출량은 6 L⋅min-1이다. 
+쿨링패드를 통과하는 공기의 유속은 외부 공기가 쿨링패드 
+시스템을 통과하는 속도가 너무 빠르면 물과 공기의 접촉 시
+간이 단축되어 물이 공기로부터 충분한 증발잠열을 흡수하지 
+못하고 냉각 효율이 감소하며, 남아있는 물에 의해 쿨링패드
+의 압력 손실도 커지게 된다 (Bruno and Liu, 2009; Malli et 
+al., 2011). 이러한 이유로 쿨링패드를 통과하는 공기의 속도는 
+최소 0.5 m⋅s-1에서 최대 1.5 m⋅s-1로 설계하도록 제안되기
+도 하였다 (Dağtekin et al., 2011). 따라서 본 연구에서는 통과 
+유속을 1.2 m⋅s-1로 설계하였다.
+쿨링패드의 포화 불균일도에 따른 성능 평가를 위해 쿨링
+패드 포화 시나리오를 Fig. 4와 같이 구성하였다. 포화 불균일
+도를 구현하기 위해 전면을 100% 포화시킬 수 있는 용수량을 
+살포 노즐의 위치를 조정하여 면적의 25, 50, 75%에 살포하여 
+포화 불균일 상태를 모사하였다. 
+실내 실험 환경제어는 가습기 및 제습기를 활용하여 습도
+를 조절하였고, 온풍기를 이용하여 쿨링패드로 유입되는 공
+ 	 
+ 	  !
+ 	 !
+ 	 "!
+Fig. 4 Saturation scenarios for evaluating the cooling performance of non-uniformly saturated cooling pads
+Fig. 3 Schematic view of the wind tunnel for cooling pad performance tests
+
+------------------------------------
+한국농공학회논문집 제66권 제6호, 2024 • 41
+기의 온도와 상대습도가 각각 30∼35 oC, 30∼80%의 범위로 
+외부 환경과 동일하게 유지하였으며, 이는 실제 육계사에서 
+쿨링패드가 동작할 때의 온도와 상대습도의 범위와 유사하다. 
+각 실험은 안정적인 조건에서 5분 동안 1초 간격으로 측정하
+였다. 물 순환 장치와 가변식 팬을 이용하여 쿨링패드로 유입
+되는 물의 유량과 공기의 유속을 조절하였으며, 이를 통해 쿨
+링패드의 성능 지표인 온도 저감, 냉각 효율, 질량 전이, 열 
+전이를 분석하였다. 이러한 성능 지표들은 쿨링패드 통과 전⋅
+후의 온도와 습도를 측정하여 계산되었으며, 각 변수들이 쿨
+링패드의 증발 냉각 효과에 미치는 영향을 종합적으로 평가
+하였다.
+3. 쿨링패드 성능 및 증발냉각 효과 산정 방법
+쿨링패드 냉각 효율은 식 (1)과 같이 이론적인 최대 온도 
+감소량에 대한 실제 온도 감소량의 비로 나타낼 수 있다 
+(ASHRAE, 2001; Xu et al., 2015). 쿨링패드의 냉각 원리는 
+고온 건조한 공기가 물에 젖은 쿨링패드를 통과할 때, 쿨링패
+드 내 일부 수분이 공기의 흐름으로 증발하는데, 이때 물이 
+증발하는 데에 필요한 증발잠열을 쿨링패드를 통과하는 공기
+로부터 흡수한다. 이 과정에서 쿨링패드를 통과하는 공기는 
+빼앗긴 증발잠열만큼의 현열 변화를 일으키며 온도가 감소하
+게 되지만, 그에 상응하는 수증기 양만큼 습도가 상승하게 된
+다. 따라서 쿨링패드를 통과하는 공기의 상대습도가 100%인 
+경우, 쿨링패드를 적시고 있는 물이 증발하지 않게 되며, 통과
+하는 기온 변화도 일어나지 않는다. 이론적으로 쿨링패드는 
+공기의 습구 온도까지 온도를 낮출 수 있으며, 외부 공기의 
+상대습도가 높을 경우, 쿨링패드의 효율이 현저히 낮아지는 
+원인이며, 이를 식으로 정리하면 다음과 같다 (Alodan and 
+Al-Faraj, 2005; Kittas et al., 2003).
+
+
+
+(1)
+여기서, 는 쿨링패드의 냉각 효율, , 는 쿨링패드 통
+과 전과 후의 건구 온도 (oC), 은 습구 온도 (oC)를 의미한
+다. 습구 온도는 건구 온도 (oC)와 상대 습도 (, %)를 이용
+한 추정식으로 계산하였다 (Aziz et al., 2018; Rong et al., 
+2017).
+atan∙
+atanatan
+×∙atan
+×
+(2)
+쿨링패드를 통과하는 습공기의 에너지와 질량 균형은 다음
+과 같이 나타낼 수 있다. 식 (3)는 습공기의 제거된 열, 식 (4)
+는 증발된 물의 질량을 나타낸다. 
+
+(3)
+
+(4)
+여기서, 는 열전달량 (W), 는 공기의 밀도 (kg⋅m-3), 
+는 건공기의 비열 (kJ⋅kg-1⋅K-1), 는 쿨링패드를 통과하
+는 공기의 부피 유량 (m3 h-1), , 는 쿨링패드 통과 전후
+의 습도비 (kg⋅kg-1⋅da), , 는 쿨링패드 통과 전후의 
+포화 수증기의 엔탈피 (kJ⋅kg-1), 는 쿨링패드 통과 전의 습구 
+온도에서의 포화 수증기의 엔탈피 (kJ⋅k⋅g-1), 는 쿨
+링패드에서 증발하는 물의 양 (kg h-1), 는 쿨링패드를 통과
+하는 공기의 질량 변화량 (kg⋅h-1)을 나타낸다. 
+쿨링패드의 표면에서 발생하는 증발냉각 과정의 순 열전달
+과 물질 전달은 식 (5), (6)와 같이 나타낼 수 있다. 
+
+(5)
+
+(6)
+여기서, 는 열전달 계수 (W m-2 K-1), 는 질량 전달계
+수 (m⋅h-1), 는 쿨링패드의 전체 표면적 (m2)를 나타낸다. 
+와 는 대수 평균 차이 (Logarithmic mean difference)
+로 계산할 수 있으며, 식 (7) 및 (8)과 같이 나타낼 수 있다. 
+
+ln
+
+(7)
+
+ln
+
+(8)
+Ⅲ. 결과 및 고찰
+1. 현장 쿨링패드 시스템 성능 평가 결과
+대상 농장에 운영되고 있는 쿨링패드의 포화 불균일도 정
+량평가 결과는 Fig. 5와 같이 나타났다. 펌프가 가동된 후, 펌
+프와 거리가 가까운 곳에서 쿨링패드는 거의 모든 영역이 젖
+어있었으며, 펌프로부터 거리가 멀어질수록 물이 공급되지 
+않는 것으로 나타났다. 열화상 카메라 (Testo872, Testo SE & 
+Co.KGaA, Germany)를 활용해 용수공급 후 쿨링패드를 촬영
+
+------------------------------------
+42 • Journal of the Korean Society of Agricultural Engineers, 66(6), 2024. 11
+하고, 영상 분석 프로그램을 이용하여 색상 정보에 따라 면적 
+비율을 산정한 결과, 측정 지점 세 곳 중 용수공급 펌프와 인
+접한 순서에 따라 포화도가 70.5%, 8.7%, 0.2%로 나타나 펌프
+와 거리가 멀어질수록 포화 효율이 급격히 저하되는 것으로 
+나타났다. 특히 펌프로부터 거리가 먼 지점에서는 쿨링패드
+가 거의 젖지 않는 것으로 나타났다.
+펌프와의 거리에 따라 선정된 세 지점에서 측정한 결과는 
+Fig. 6과 같다. 펌프와 인접한 측정 지점 Ⅰ에서 외기의 쿨링패
+드 통과 전후의 온도 감소 및 냉각 효율은 각각 7.3∼11.7 oC와 
+68.2∼95.5%로 나타났으며, 펌프와 가장 멀리 떨어진 측정 지
+점 Ⅲ에서는 각각 3.8∼7.3 oC와 36.0∼63.3%로 나타났다. 펌
+프와의 거리가 멀어질수록 쿨링패드 포화도가 감소하며 냉각 
+효율 또한 저하된 것으로 판단된다. 쿨링패드의 공기 냉각 원
+리에 따르면 쿨랭패드가 젖지 않을 경우, 통과 전후의 온도 
+감소가 없으며, 냉각 효율이 나타나지 않아야 하지만, 외기가 
+쿨링패드를 통과 후 온도가 낮은 실내 공기와 섞이면서 냉각 
+효율이 산정된 것으로 판단된다. 
+2. 실내 풍동에서 쿨링패드의 성능 평가 결과
+용수공급 변화에 따른 쿨링패드의 성능 평가 결과는 Table 
+1과 같다. 펌프 유량이 1.50 L⋅min-1일 때 가장 높은 냉각 
+효율을 보였는데 다른 두 유량에서도 냉각 효율은 조금 낮지
+만 높은 냉각 효율을 보여 공급된 유량에 따라 큰 차이를 보이
+지는 않았다. 펌프 유량이 0.35 L⋅min-1에서 1.50 L⋅min-1으
+로 증가한 경우, 모든 관련 변수가 증가하면서 쿨링패드의 효
+율이 증가하는 경향을 보였지만, 2.50 L⋅min-1의 최대 펌프 
+유량 조건에서 오히려 쿨링패드의 효율이 감소하는 경향을 
+보였다. 이는 최대 펌프 유량 조건에서 쿨링패드 표면에 흐르
+는 물의 양이 많아짐에 따라, 쿨링패드를 통과하는 공기가 저
+항을 더 크게 받으며, 쿨링패드를 통과하는 공기의 양이 줄어
+드는 것으로 판단된다. 또한 쿨링패드에 공급되는 물의 양에 
+비해 쿨링패드에서 물이 증발하는 양 (= 0.0166 L⋅
+	 
+ #
+	 
+ $
+	 
+ %
+Fig. 5 Identification of nun-uniform saturation of the cooling pads using thermal imaging camera. P indicates the water pump
+0
+20
+40
+60
+80
+100
+0
+5
+10
+15
+00:00 02:00 04:00 06:00 08:00 10:00
+Evaporative effective (%)
+Temperature drop (℃)
+Time (mm:ss)
+T1 - T2
+η
+0
+20
+40
+60
+80
+100
+0
+5
+10
+15
+00:00 02:00 04:00 06:00 08:00 10:00
+Evaporative effective (%)
+Temperature drop (℃)
+Time (mm:ss)
+T1 - T2
+η
+0
+20
+40
+60
+80
+100
+0
+5
+10
+15
+00:00 02:00 04:00 06:00 08:00 10:00
+Evaporative effective (%)
+Temperature drop (℃)
+Time (mm:ss)
+T1 - T2
+η
+	 
+ %
+	 
+ $
+	 
+ #
+Fig. 6 Measurement of performance of cooling pad in a commercial broiler house. η is the cooling efficiency
+
+------------------------------------
+한국농공학회논문집 제66권 제6호, 2024 • 43
+min-1)이 극히 적었다. 이는 쿨링패드의 모든 표면이 이미 충
+분히 젖어있는 상태인 경우, 펌프 유량의 변화는 쿨링패드의 
+효율에 큰 영향을 미치지 않으며, 오히려 다른 요인들이 온도 
+저감효과에 영향을 미칠 것으로 판단된다. 
+쿨링패드를 통과하는 공기의 유속에 따른 쿨링패드 효율은 
+Fig. 7과 같다. 유속이 증가함에도 온도 저감량 및 냉각 효율은 
+일정한 수준을 나타냈고, 질량 전달계수는 0.0013 m⋅h-1에서 
+0.0032 m⋅h-1으로, 열전달 계수는 14.3 W⋅m-2⋅K-1에서 51.6 
+W⋅m-2⋅K-1으로 증가하는 경향을 보였다. 이는 유속이 증가
+함에 따라 쿨링패드를 통과하는 공기량 또한 증가하지만, 온
+도 감소량은 유사한 수준을 보여 냉각 효율 또한 80% 전후의 
+값을 보인 것으로 판단되고, 유량이 증가하여도 일정 수준의 
+온도 저감 효과를 보인 것은 Fig. 7 (c), (d)에서 나타난 바와 
+같이 질량전달 및 열전달이 더욱 활발히 일어났기 때문인 것
+으로 분석된다.
+또한 환경 변화에 따른 쿨링패드 성능을 평가하기 위해 제
+습과 가습하여 상대습도를 제어하고, 온도 31.0∼33.4 oC, 상
+대습도 45∼76% 범위에서 쿨링패드의 성능을 평가하였다. 그 
+결과 Fig. 8과 같이 쿨링패드에 유입되는 공기의 상대습도가 
+증가할수록 온도 감소량은 7.6 oC에서 2.6 oC까지 감소하여 
+냉각 효과가 낮아지는 것을 확인하였고, 이와 대비하여 Fig. 
+9 (a)에서 나타난 바와 같이 통과하는 공기의 뚜렷한 온도 변
+화에도 온도 저감량의 뚜렷한 경향을 보이지 않았고, 유입 공
+기의 온도와 상관없이 Fig. 9 (b)에서 나타난 바와 같이 일정 
+수준의 냉각 효율을 보였으며, 질량전달 또한 유사한 수준을 
+나타내 증발잠열에 의한 온도 감소량은 상대습도에 지배적이
+라고 판단된다. 
+ ⋅	
+
+ 
+	
+ 
+	
+ 
+ ⋅	
+  
+⋅⋅	
+&!
+ &"
+'&(
+""
+&"
+!
+ !)
+'!* 
+""
+&&! 
+"!
+ "(
+')
+)
+"'& 
+Table 1 Cooling efficiency of the cooling pads according to water supply amount
+ +
+		 	
+  ,
+  		 
+  		 
+Fig. 7 Cooling effect according to air velocity
+
+------------------------------------
+44 • Journal of the Korean Society of Agricultural Engineers, 66(6), 2024. 11
+ +
+		 	
+  ,
+  		 
+  		 
+Fig. 8 Cooling effect according to relative humidity
+ +
+		 	
+  ,
+  		 
+  		 
+Fig. 9 Cooling effect according to temperature
+
+------------------------------------
+한국농공학회논문집 제66권 제6호, 2024 • 45
+쿨링패드의 불균일한 물 공급에 따른 성능 평가 결과는 
+Table 2와 같다. 현장에서 빈번하게 발생하는 쿨링패드의 물
+이 불균일하게 도포되어 있는 경우를 모의하였고, 포화도에 
+따른 냉각 효율을 평가하였다. 포화도 100%에 비해 25%에서
+는 온도 저감량이 약 40% 저하되는 것으로 나타났고, 냉각 
+효율 또한 40% 가량 낮게 산정되었다. 쿨링패드가 물에 포화
+된 면적이 전체 면적의 25%로 줄었다 하더라도 냉각 효과는 
+이보다 적게 감소하였는데, 이는 쿨링패드에 공급된 물이 연
+직 하향으로 이동하는 것이 아니라 사선방향으로 전달되면서 
+실제로는 더 많은 면적에 물이 공급되었기 때문으로 추정된
+다. 포화도가 100%에서 25%로 줄어들면서 열전달 계수는 
+57% 낮게 평가되어 동일 시설물에서 포화도에 따라 현저한 
+효율 차이가 발생하는 것으로 나타났다. 외관 상의 포화도와 
+실제 쿨링패드 내부의 물 공급 상태는 다를 수 있으므로, 본 
+실험 결과로 부터는 외관상의 포화도가 75% 이상은 유지되어
+야 100% 포화되었을 때와 유사한 기온 저감효과 및 냉각 효율
+을 나타낼 것으로 판단된다. 따라서 적절한 설계와 시공, 시설
+물 유지관리를 통해 쿨링패드를 올바르게 사용하는 것이 육
+계사 고온스트레스 관리 및 내부 온도 제어에 경제적이고 효
+과적인 방법임을 확인하였다. 또한 쿨링패드 증발냉각 성능
+을 최적화 하고, 실제 농가에 능동적인 적용을 견인하기 위해 
+용수의 순환시스템 개발 및 분사장치의 개선이 뒷받침 되어
+야 할 것으로 사료된다.
+Ⅳ. 결론
+본 연구에서는 여름철 육계사에서 사용되는 쿨링패드의 성
+능을 평가하기 위해 실제 육계사에서 쿨링패드를 통과하는 
+공기의 온도 감소량, 냉각 효율을 측정하고 분석하였으며, 실
+내 풍동을 활용하여 펌프의 유량, 통과하는 공기의 유속, 온습
+도, 쿨링패드의 포화 불균일도에 따라 쿨링패드의 성능을 평
+가하였다.
+1. 실제 육계사에서 길이가 긴 쿨링패드를 설치한 경우, 설
+계 및 시공 오류, 파손, 관리 소홀 등으로 용수공급의 
+불균일성이 발생하고, 이로 인해 각 영역별로 쿨링패드 
+포화도의 차이가 나타나는 것을 확인하였고, 측정 결과 
+포화 불균일도에 따라 냉각 효율이 평균적으로 약 30% 
+차이를 보였다. 이는 쿨링패드가 본래의 잠열 증발 효과
+를 충분히 발휘하지 못하도록 하여, 육계사 내 적정 온
+도 유지에 부정적인 영향을 미칠 수 있음을 시사한다.
+2. 실내 풍동을 이용하여 쿨링패드의 성능을 온도 감소량, 
+냉각 효율, 질량 전달계수, 열 전달 계수를 이용하여 분
+석 및 평가하였다. 쿨링패드의 물의 용수공급량은 쿨링
+패드 성능에 유의미한 영향을 미치지 않았으며, 통과하
+는 공기의 유속이 증가할수록 온도 감소량은 감소하였
+으나, 냉각 효율에는 차이가 없었다. 반면, 질량 전달계
+수와 열 전달 계수는 풍속이 증가함에 따라 상승하는 
+경향을 보였다. 또한, 온습도에 따른 비교 결과, 습도가 
+증가함에 따라 온도 감소량과 증발 전달계수는 모두 감
+소한 반면, 나머지 변수들은 유의미한 변화를 나타내지 
+않았다. 온도가 증가함에 따라 쿨링패드는 선형적인 성
+능 분포를 보이지 않았다. 
+3. 또한 육계사에서와 같이 물이 불균일하게 분포된 상황
+에서 쿨링패드의 성능을 평가하였다. 포화도에 따른 냉
+각 효율을 평가하였다. 포화도 100%에 비해 25%에서는 
+온도 저감량이 약 40% 저하되는 것으로 나타났고, 냉각 
+효율 또한 40% 가량 낮게 산정되었다. 열전달 계수는 
+57% 낮게 평가되어 동일 시설물에서 포화도에 따라 현
+저한 효율 차이가 발생하는 것으로 나타났다. 쿨링패드
+의 활용 시, 외관상의 포화도가 약 75% 이상은 유지되어
+야 쿨링패드의 최대 냉각 효율을 기대할 수 있을 것으로 
+판단되었다.
+4. 본 연구를 통해 육계사 고온스트레스 저감을 위한 관리 
+방법으로 쿨링패드의 도입이 경제성을 확보하고, 온도 
+저감에 효과적인 방법임을 확인하였고, 향후 용수 사용 
+절감을 위한 물 순환시스템 및 분사장치 개선을 위한 
+연구가 요구된다.
+본 연구를 통해 육계사에서 쿨링패드를 사용한 냉각 효과
+  
+	
+
+ 
+	
+ 
+	
+  
+⋅	
+  
+  	
+ "!
+* ((
+*(*!!
+
+!&
+ !
+(&"(
+(("
+"
+ (& 
+  !
+( )!
+ &"(
+"
+"*!&
+
+ ''!
+ (  
+"
+"()  
+Table 2 Cooling efficiency according to non-uniform saturation of cooling pads
+
+------------------------------------
+46 • Journal of the Korean Society of Agricultural Engineers, 66(6), 2024. 11
+를 명확히 규명할 수 있었다. 특히, 현재 불균일한 물의 공급
+으로 인한 쿨링패드의 성능이 저하 될 수 있음을 확인하였다. 
+쿨링패드의 물 공급 방식 및 유지 관리를 최적화하여 실제 
+현장에서의 효율성을 높이는 추가 연구가 필요할 것이다. 
+감사의 글
+본 연구는 농림축산식품부 및 과학기술정보통신부, 농촌진
+흥청의 재원으로 농림식품기술기획평가원과 재단법인 스마
+트팜연구개발사업단의 스마트팜다부처패키지혁신기술개발
+사업 (세부과제번호: RS-2021-IP421024)의 지원에 의해 이루
+어진 것임.
+REFERENCES
+1.
+Alodan, M. A., and A. A. Al-Faraj, 2005. Design and 
+evaluation of galvanized metal sheets as evaporative 
+cooling pads. J. King Saud Univ. 18: 9-18.
+2.
+ASHRAE Standard ANSI/ASHRAE 133-2001, 2001. 
+Method of testing direct evaporative air coolers, 24.
+3.
+Aziz, R. A., N. F. Zamrud, and N. Rosli, 2018. Comparison 
+on cooling efficiency of cooling pad materials for 
+evaporative 
+cooling 
+system. 
+Journal 
+of 
+Modern 
+Manufacturing Systems and Technology 1: 61-68.
+4.
+Bruno, F., and M. M. Liu, 2009. Technical background 
+research on evaporative air conditioners and feasibility of 
+rating their water consumption. University of South 
+Australia, Adelaide, Australia.
+5.
+Dağtekin, M., C. Karaca, and Y. Yildiz, 2009a. Long axis 
+heat distribution in a tunnel-ventilated broiler house 
+equipped with an evaporative pad cooling system. Animal 
+Production Science 49(12): 1125-1131.
+6.
+Dağtekin, M., C. Karaca, and Y. Yildiz, 2009b. 
+Performance characteristics of a pad evaporative cooling 
+system in a broiler house in a Mediterranean climate. 
+Biosystems Engineering 103: 100-104.
+7.
+Dağtekin, M., C. Karaca, Y. Yildiz, A. Başçetinçelik, and 
+Ö. Paydak, 2011. The effects of air velocity on the 
+performance of pad evaporative cooling systems. African 
+Journal of Agricultural Research 6(7): 1813-1822.
+8.
+Jain, J. K., and D. A. Hindoliya, 2011. Experimental 
+performance of new evaporative cooling pad materials. 
+Sustainable Cities and Society 1(4): 252-256.
+9.
+Kittas, C., T. Bartzanas, and A. Jaffrin, 2003. Temperature 
+gradients in a partially shaded large greenhouse equipped 
+with evaporative cooling pads. Biosystems Engineering 
+85(1): 87-94.
+10.
+Laknizi, A., A. Ben Abdellah, M. Faqir, E. Essadiqi, and 
+S. Dhimdi, 2019. Performance characterization of a direct 
+evaporative cooling pad based on pottery material. 
+International Journal of Sustainable Engineering 14(1): 
+46-56.
+11.
+Liao, C. M., and K. H. Chiu, 2002. Wind tunnel modeling 
+the system performance of alternative evaporative cooling 
+pads in Taiwan region. Building and Environment 37: 
+177-187.
+12.
+Malli, A., H. R. Seyf, M. Layeghi, S. Sharifian, and H. 
+Behravesh, 2011. Investigating the performance of 
+cellulosic evaporative cooling pads. Energy Conversion 
+and Management 52(7): 2598-2603.
+13.
+Naveenprabhu, V., and M. Suresh, 2020. Performance 
+enhancement studies on evaporative cooling using 
+volumetric heat and mass transfer coefficients. Numerical 
+Heat Transfer 1-20.
+14.
+Rong, L., P. Pedersen, T. L. Jensen, S. Morsing, and G. 
+Zhang, 2017. Dynamic performance of an evaporative 
+cooling pad investigated in a wind tunnel for application 
+in hot and arid climate. Biosystems Engineering 156: 
+173-182.
+15.
+Simmons, J., and B. Lott, 1996. Evaporative cooling 
+performance resulting from changes in water temperature. 
+Applied Engineering in Agriculture 12(4): 497-500.
+16.
+Song, D., and A. King, 2015. Effects of heat stress on 
+broiler meat quality. World’s Poultry Science Journal 
+71(4): 701-709.
+17.
+Teeter, R. G., and T. Belay, 1996. Broiler management 
+during acute stress. Animal Feed Science and Technology 
+58: 127-142.
+18.
+Tejero-González, A., and A. Franco-Salas, 2021. Optimal 
+operation of evaporative cooling pads: a review. Renewable 
+and Sustainable Energy Reviews 151.
+19.
+Wu, J. M., X. Huang, and H. Zhang, 2009. Theoretical 
+analysis on heat and mass transfer in a direct evaporative 
+cooler. Applied Thermal Engineering 29(5-6): 980-984.
+20.
+Xu, J., Y. Li, R. Z. Wang, W. Liu, and P. Zhou, 2015. 
+Experimental performance of evaporative cooling pad 
+systems in greenhouses in humid subtropical climates. 
+Applied Energy 138: 291-301.
+
+------------------------------------
